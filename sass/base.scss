@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import 'functions';
+
+$clock : 300px;
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+body{
+	@include gradient(radial, (#aaa, #ddd));
+	position: relative;
+}
+
+.main{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@include flex(flex);
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+.clock{
+	border: solid ($clock / 30 + 5) #c62828 ;
+	max-width: $clock;
+	width: $clock;
+	min-height: $clock;
+	position: relative;
+	@include gradient(radial, (#fff, #FFF));
+	@include box-sizing(border-box);
+	@include border-radius(50%);
+	@include box-shadow((0 0 15px 1px rgba(0,0,0,.7), 0 0 4px 1px rgba(0,0,0,.7) inset));
+
+	&:after{
+		position: absolute;
+		@include border-radius(50%);
+		content: '';
+		border: dotted 2px #111;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 80%;
+		z-index: 0;
+		height: 80%;
+	}
+
+	.point{
+		width: ($clock / 10);
+		height: ($clock / 10);
+		background: #c62828;
+		z-index: 2;
+		@include border-radius(50%);
+		@include transform(scale(.4));
+		@include box-shadow(2px 2px 6px #111);
+	}
+
+	
+	.minutes{
+		height: ($clock / 3 - 10);
+		width: 4px;
+		background: #323232;
+		z-index: 1;
+		@include transform(translate3D(0, -50%, 0));
+		@include transform-origin(bottom center);
+		@include border-radius(50% 50% 0 0);
+	}
+	.hours{
+		height: ($clock / 3 - 40);
+		width: 4px;
+		background: #323232;
+		z-index: 1;
+		@include transform(translate3D(0, -50%, 0));
+		@include transform-origin(bottom center);
+		@include border-radius(50% 50% 0 0);
+	}
+	.seconds{
+		height: ($clock / 3 );
+		width: 1px;
+		background: #c62828;
+		z-index: 2;
+		@include transform(translate3D(0, -50%, 0));
+		@include transform-origin(bottom center);
+		@include border-radius(50% 50% 0 0);
+	}
+
+	.point,
+	.hours,
+	.minutes,
+	.seconds{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
+	.numbers{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.number{
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			display: inline;
+			text-align: center;
+			width: 35px;
+			height: 35px;
+			font-size: $clock / 10 + 4;
+			font-weight: bold;
+			color: #323232;
+			z-index: 1;
+			background: white;
+			font-family: 'Architects Daughter', cursive;
+
+			&._12{
+				bottom: inherit;
+				top: 5px;
+				left: -3px;
+			}
+
+			&._6{
+				top: initial;
+				bottom: 15px;
+				left: -3px;
+			}
+
+			&._3{
+				left: initial;
+				right: 10px;
+				top: 0px;
+				padding-bottom: 10px;
+			}
+
+			&._9{
+				right: initial;
+				top: 0px;
+				padding-bottom: 10px;
+				left: 10px;
+			}
+		}
+	}
+}
+
+.current_date{
+	position:  absolute;
+	top:  15px;
+	background: #fefefe;
+	padding: .51rem 0;
+	margin: auto;
+	left: 0px;
+	right: 0;
+	text-align: center;
+	border: solid 1px #111;
+	font-weight: bold;
+	display: inline;
+	max-width: 190px;
+	min-height: 60px;
+	@include border-radius(5px);
+
+	span{
+		font-weight: normal;
+		color: #c62828;
+	}
+
+	h1,span{
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+body {
+  background-image: -webkit-radial-gradient(#aaa, #ddd);
+  background-image: -khtml-radial-gradient(#aaa, #ddd);
+  background-image: -moz-radial-gradient(#aaa, #ddd);
+  background-image: -ms-radial-gradient(#aaa, #ddd);
+  background-image: -o-radial-gradient(#aaa, #ddd);
+  background-image: radial-gradient(#aaa, #ddd);
+  position: relative; }
+
+.main {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center; }
+
+.clock {
+  border: solid 15px #c62828;
+  max-width: 300px;
+  width: 300px;
+  min-height: 300px;
+  position: relative;
+  background-image: -webkit-radial-gradient(#fff, #FFF);
+  background-image: -khtml-radial-gradient(#fff, #FFF);
+  background-image: -moz-radial-gradient(#fff, #FFF);
+  background-image: -ms-radial-gradient(#fff, #FFF);
+  background-image: -o-radial-gradient(#fff, #FFF);
+  background-image: radial-gradient(#fff, #FFF);
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
+  -khtml-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
+  -moz-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
+  -ms-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
+  -o-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset; }
+  .clock:after {
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    content: '';
+    border: dotted 2px #111;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    z-index: 0;
+    height: 80%; }
+  .clock .point {
+    width: 30px;
+    height: 30px;
+    background: #c62828;
+    z-index: 2;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transform: scale(0.4);
+    -khtml-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    transform: scale(0.4);
+    -webkit-box-shadow: 2px 2px 6px #111;
+    -khtml-box-shadow: 2px 2px 6px #111;
+    -moz-box-shadow: 2px 2px 6px #111;
+    -ms-box-shadow: 2px 2px 6px #111;
+    -o-box-shadow: 2px 2px 6px #111;
+    box-shadow: 2px 2px 6px #111; }
+  .clock .minutes {
+    height: 90px;
+    width: 4px;
+    background: #323232;
+    z-index: 1;
+    -webkit-transform: translate3D(0, -50%, 0);
+    -khtml-transform: translate3D(0, -50%, 0);
+    -moz-transform: translate3D(0, -50%, 0);
+    -ms-transform: translate3D(0, -50%, 0);
+    -o-transform: translate3D(0, -50%, 0);
+    transform: translate3D(0, -50%, 0);
+    -webkit-transform-origin: bottom center;
+    -khtml-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-border-radius: 50% 50% 0 0;
+    -khtml-border-radius: 50% 50% 0 0;
+    -moz-border-radius: 50% 50% 0 0;
+    -ms-border-radius: 50% 50% 0 0;
+    -o-border-radius: 50% 50% 0 0;
+    border-radius: 50% 50% 0 0; }
+  .clock .hours {
+    height: 60px;
+    width: 4px;
+    background: #323232;
+    z-index: 1;
+    -webkit-transform: translate3D(0, -50%, 0);
+    -khtml-transform: translate3D(0, -50%, 0);
+    -moz-transform: translate3D(0, -50%, 0);
+    -ms-transform: translate3D(0, -50%, 0);
+    -o-transform: translate3D(0, -50%, 0);
+    transform: translate3D(0, -50%, 0);
+    -webkit-transform-origin: bottom center;
+    -khtml-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-border-radius: 50% 50% 0 0;
+    -khtml-border-radius: 50% 50% 0 0;
+    -moz-border-radius: 50% 50% 0 0;
+    -ms-border-radius: 50% 50% 0 0;
+    -o-border-radius: 50% 50% 0 0;
+    border-radius: 50% 50% 0 0; }
+  .clock .seconds {
+    height: 100px;
+    width: 1px;
+    background: #c62828;
+    z-index: 2;
+    -webkit-transform: translate3D(0, -50%, 0);
+    -khtml-transform: translate3D(0, -50%, 0);
+    -moz-transform: translate3D(0, -50%, 0);
+    -ms-transform: translate3D(0, -50%, 0);
+    -o-transform: translate3D(0, -50%, 0);
+    transform: translate3D(0, -50%, 0);
+    -webkit-transform-origin: bottom center;
+    -khtml-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-border-radius: 50% 50% 0 0;
+    -khtml-border-radius: 50% 50% 0 0;
+    -moz-border-radius: 50% 50% 0 0;
+    -ms-border-radius: 50% 50% 0 0;
+    -o-border-radius: 50% 50% 0 0;
+    border-radius: 50% 50% 0 0; }
+  .clock .point,
+  .clock .hours,
+  .clock .minutes,
+  .clock .seconds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .clock .numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .clock .numbers .number {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      display: inline;
+      text-align: center;
+      width: 35px;
+      height: 35px;
+      font-size: 34px;
+      font-weight: bold;
+      color: #323232;
+      z-index: 1;
+      background: white;
+      font-family: 'Architects Daughter', cursive; }
+      .clock .numbers .number._12 {
+        bottom: inherit;
+        top: 5px;
+        left: -3px; }
+      .clock .numbers .number._6 {
+        top: initial;
+        bottom: 15px;
+        left: -3px; }
+      .clock .numbers .number._3 {
+        left: initial;
+        right: 10px;
+        top: 0px;
+        padding-bottom: 10px; }
+      .clock .numbers .number._9 {
+        right: initial;
+        top: 0px;
+        padding-bottom: 10px;
+        left: 10px; }
+
+.current_date {
+  position: absolute;
+  top: 15px;
+  background: #fefefe;
+  padding: .51rem 0;
+  margin: auto;
+  left: 0px;
+  right: 0;
+  text-align: center;
+  border: solid 1px #111;
+  font-weight: bold;
+  display: inline;
+  max-width: 190px;
+  min-height: 60px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .current_date span {
+    font-weight: normal;
+    color: #c62828; }
+  .current_date h1, .current_date span {
+    font-size: 13px; }
+
+/*# sourceMappingURL=main.css.map */
