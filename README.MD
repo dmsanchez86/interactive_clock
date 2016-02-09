@@ -2,4 +2,6 @@
 
 ### Made With CSS3, JavaScript and HTML5
 
-[Preview](https://github.com/dmsanchez86/interactive_clock.git)
+[Preview](http://dmsanchez86.github.io/interactive_clock/)
+
+
