@@ -129,7 +129,7 @@ body {
     height: 80%; }
   .clock:before {
     position: absolute;
-    top: 120%;
+    top: 110%;
     left: 0;
     content: '';
     width: 100%;
@@ -390,6 +390,8 @@ body {
               text-decoration: underline;
               font-weight: bold;
               cursor: default; }
+              .clock .config .item .submenu ul li.header:hover {
+                background: transparent; }
   .clock.small {
     border: solid 11.66667px #c62828;
     max-width: 200px;
@@ -441,19 +443,19 @@ body {
       height: 45px;
       font-size: 44px; }
       .clock.big .numbers .number._12 {
-        top: 4px;
-        left: 0px; }
+        top: 9px;
+        left: 4px; }
       .clock.big .numbers .number._6 {
-        bottom: 8px;
-        left: 0px; }
+        bottom: 18px;
+        left: 4px; }
       .clock.big .numbers .number._3 {
-        right: 6px;
-        top: 0px;
-        padding-bottom: 5px; }
+        right: 15px;
+        top: -6px;
+        padding-bottom: 10px; }
       .clock.big .numbers .number._9 {
-        top: 0px;
-        padding-bottom: 5px;
-        left: 6px; }
+        top: -6px;
+        padding-bottom: 10px;
+        left: 15px; }
 
 .current_date {
   position: absolute;
@@ -487,6 +489,13 @@ body {
   .current_date h1, .current_date span {
     font-size: 13px; }
 
+@media (max-width: 500px) {
+  .clock .config {
+    left: -20px; }
+    .clock .config ul.size li:last-child {
+      display: none; }
+  .clock.small .config {
+    left: -60px; } }
 @keyframes rotate {
   0%, 100% {
     -webkit-transform: scale(1) rotate(0);

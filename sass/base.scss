@@ -181,7 +181,7 @@ body{
 
 	&:before{
 		position: absolute;
-		top: 120%;
+		top: 110%;
 		left: 0;
 		content: '';
 		width: 100%;
@@ -364,6 +364,10 @@ body{
 							text-decoration: underline;
 							font-weight: bold;
 							cursor: default;
+
+							&:hover{
+								background: transparent;
+							}
 						}
 
 					}
@@ -460,25 +464,25 @@ body{
 				font-size: $clock / 10 + 4;
 
 				&._12{
-					top: 4px;
-					left: 0px;
+					top: 9px;
+					left: 4px;
 				}
 
 				&._6{
-					bottom: 8px;
-					left: 0px;
+					bottom: 18px;
+					left: 4px;
 				}
 
 				&._3{
-					right: 6px;
-					top: 0px;
-					padding-bottom: 5px;
+					right: 15px;
+					top: -6px;
+					padding-bottom: 10px;
 				}
 
 				&._9{
-					top: 0px;
-					padding-bottom: 5px;
-					left: 6px;
+					top: -6px;
+					padding-bottom: 10px;
+					left: 15px;
 				}
 			}
 		}
@@ -512,6 +516,28 @@ body{
 	}
 }
 
+
+@media (max-width: 500px){
+	.clock{
+		.config{
+			left: -20px;
+
+			ul.size{
+				li{
+					&:last-child{
+						display: none;
+					};
+				}
+			}
+		}
+
+		&.small{
+			.config{
+				left: -60px;
+			}
+		}
+	}
+}
 
 // keyframes
 @keyframes rotate{
