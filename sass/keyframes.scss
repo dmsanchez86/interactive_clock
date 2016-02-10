@@ -1,0 +1,20 @@
+// rotate the item on the class .config
+@keyframes rotate{
+	0%, 100%{ @include transform(scale(1) rotate(0));}
+	50%{ @include transform(scale(.7)  rotate(360deg));}
+}
+
+@-webkit-keyframes rotate{
+	0%, 100%{ @include transform(scale(1) rotate(0));}
+	50%{ @include transform(scale(.7)  rotate(360deg));}
+}
+
+@-moz-keyframes rotate{
+	0%, 100%{ @include transform(scale(1) rotate(0));}
+	50%{ @include transform(scale(.7)  rotate(360deg));}
+}
+
+@-ms-keyframes rotate{
+	0%, 100%{ @include transform(scale(1) rotate(0));}
+	50%{ @include transform(scale(.7)  rotate(360deg));}
+}

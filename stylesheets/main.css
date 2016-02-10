@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Signika:700);
+@import url(https://fonts.googleapis.com/css?family=Kreon:700);
+@import url(https://fonts.googleapis.com/css?family=Signika:600);
 * {
   border: 0;
   margin: 0;
@@ -11,13 +14,206 @@ html {
   display: block; }
 
 body {
-  background-image: -webkit-radial-gradient(#aaa, #ddd);
-  background-image: -khtml-radial-gradient(#aaa, #ddd);
-  background-image: -moz-radial-gradient(#aaa, #ddd);
-  background-image: -ms-radial-gradient(#aaa, #ddd);
-  background-image: -o-radial-gradient(#aaa, #ddd);
-  background-image: radial-gradient(#aaa, #ddd);
+  background-image: -webkit-radial-gradient(#fff, #ccc);
+  background-image: -khtml-radial-gradient(#fff, #ccc);
+  background-image: -moz-radial-gradient(#fff, #ccc);
+  background-image: -ms-radial-gradient(#fff, #ccc);
+  background-image: -o-radial-gradient(#fff, #ccc);
+  background-image: radial-gradient(#fff, #ccc);
   position: relative; }
+  body.theme2 {
+    background-image: -webkit-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -khtml-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -moz-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -ms-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -o-radial-gradient(#e3f2fd, #90caf9);
+    background-image: radial-gradient(#e3f2fd, #90caf9); }
+    body.theme2 .clock {
+      border: solid 10px #90caf9;
+      background-image: url(../img/js_clock.png);
+      background-position: 0;
+      background-color: white; }
+      body.theme2 .clock:after {
+        display: block; }
+      body.theme2 .clock .hours,
+      body.theme2 .clock .minutes,
+      body.theme2 .clock .seconds {
+        -webkit-border-radius: 30% 30% 0 0;
+        -khtml-border-radius: 30% 30% 0 0;
+        -moz-border-radius: 30% 30% 0 0;
+        -ms-border-radius: 30% 30% 0 0;
+        -o-border-radius: 30% 30% 0 0;
+        border-radius: 30% 30% 0 0; }
+      body.theme2 .clock .point,
+      body.theme2 .clock .seconds {
+        background: #1e88e5; }
+      body.theme2 .clock .hours,
+      body.theme2 .clock .minutes {
+        -webkit-box-shadow: 0 0 1px #1e88e5;
+        -khtml-box-shadow: 0 0 1px #1e88e5;
+        -moz-box-shadow: 0 0 1px #1e88e5;
+        -ms-box-shadow: 0 0 1px #1e88e5;
+        -o-box-shadow: 0 0 1px #1e88e5;
+        box-shadow: 0 0 1px #1e88e5; }
+      body.theme2 .clock .numbers .number {
+        color: #111;
+        background: white;
+        font-size: 30px;
+        padding: 0 0.5rem;
+        font-family: 'Signika', sans-serif;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+        body.theme2 .clock .numbers .number._6 {
+          bottom: 9px; }
+        body.theme2 .clock .numbers .number._3, body.theme2 .clock .numbers .number._9 {
+          padding: .5rem 0; }
+      body.theme2 .clock.small .numbers .number {
+        width: 25px;
+        height: 25px;
+        font-size: 25px; }
+        body.theme2 .clock.small .numbers .number._12 {
+          top: 5px; }
+        body.theme2 .clock.small .numbers .number._12, body.theme2 .clock.small .numbers .number._6 {
+          padding: 0 .5rem; }
+        body.theme2 .clock.small .numbers .number._3, body.theme2 .clock.small .numbers .number._9 {
+          padding: .2rem 0 .5rem; }
+      body.theme2 .clock.big .numbers .number {
+        font-size: 36px; }
+        body.theme2 .clock.big .numbers .number._12 {
+          top: 16px; }
+      body.theme2 .clock .config .item:hover {
+        background: #1e88e5; }
+      body.theme2 .clock .config .item .submenu ul li.active, body.theme2 .clock .config .item .submenu ul li:hover {
+        background: #1e88e5; }
+    body.theme2 .current_date span {
+      color: #1e88e5; }
+    body.theme2 .current_date .face {
+      background: #1e88e5; }
+  body.theme3 {
+    background-image: -webkit-radial-gradient(#c8e6c9, #43a047);
+    background-image: -khtml-radial-gradient(#c8e6c9, #43a047);
+    background-image: -moz-radial-gradient(#c8e6c9, #43a047);
+    background-image: -ms-radial-gradient(#c8e6c9, #43a047);
+    background-image: -o-radial-gradient(#c8e6c9, #43a047);
+    background-image: radial-gradient(#c8e6c9, #43a047); }
+    body.theme3 .clock {
+      border: solid 10px #7cb342;
+      background: white;
+      -webkit-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -khtml-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -moz-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -ms-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -o-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset; }
+      body.theme3 .clock:after {
+        display: block; }
+      body.theme3 .clock .point,
+      body.theme3 .clock .seconds {
+        background: #7cb342; }
+      body.theme3 .clock .numbers .number {
+        color: #111;
+        background: white;
+        font-family: 'Kreon', serif;
+        font-size: 32px;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+        body.theme3 .clock .numbers .number._6 {
+          bottom: 9px; }
+        body.theme3 .clock .numbers .number._3, body.theme3 .clock .numbers .number._9 {
+          padding: .5rem 0; }
+      body.theme3 .clock .config .item:hover {
+        background: #7cb342; }
+      body.theme3 .clock .config .item .submenu ul li.active, body.theme3 .clock .config .item .submenu ul li:hover {
+        background: #7cb342; }
+      body.theme3 .clock.small .numbers .number {
+        width: 25px;
+        height: 25px;
+        font-size: 25px; }
+        body.theme3 .clock.small .numbers .number._12 {
+          top: 5px; }
+        body.theme3 .clock.small .numbers .number._12, body.theme3 .clock.small .numbers .number._6 {
+          padding: 0 .5rem; }
+        body.theme3 .clock.small .numbers .number._3, body.theme3 .clock.small .numbers .number._9 {
+          padding: .2rem 0 .5rem; }
+      body.theme3 .clock.big .numbers .number {
+        font-size: 36px; }
+        body.theme3 .clock.big .numbers .number._12 {
+          top: 16px; }
+    body.theme3 .current_date span {
+      color: #7cb342; }
+    body.theme3 .current_date .face {
+      background: #7cb342; }
+  body.theme4 {
+    background-image: -webkit-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -khtml-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -moz-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -ms-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -o-radial-gradient(#ffecb3, #ffd54f);
+    background-image: radial-gradient(#ffecb3, #ffd54f); }
+    body.theme4 .clock {
+      border: solid 15px #ff8f00;
+      background-image: url(../img/html.png);
+      background-position: 0;
+      background-color: white;
+      border-color: #ffd54f;
+      -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset;
+      -khtml-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset;
+      -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset;
+      -ms-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset;
+      -o-box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.4), 0 0 7px rgba(0, 0, 0, 0.4) inset; }
+      body.theme4 .clock .point,
+      body.theme4 .clock .seconds {
+        background: #ff8f00; }
+      body.theme4 .clock .hours,
+      body.theme4 .clock .minutes,
+      body.theme4 .clock .seconds {
+        -webkit-border-radius: 30% 30% 0 0;
+        -khtml-border-radius: 30% 30% 0 0;
+        -moz-border-radius: 30% 30% 0 0;
+        -ms-border-radius: 30% 30% 0 0;
+        -o-border-radius: 30% 30% 0 0;
+        border-radius: 30% 30% 0 0; }
+      body.theme4 .clock .numbers .number {
+        color: #111;
+        background: transparent;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc;
+        font-family: 'Signika', sans-serif;
+        font-weight: 600;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+        body.theme4 .clock .numbers .number._6 {
+          bottom: 9px; }
+        body.theme4 .clock .numbers .number._3, body.theme4 .clock .numbers .number._9 {
+          padding: .5rem 0; }
+      body.theme4 .clock.small .hours,
+      body.theme4 .clock.small .minutes {
+        width: 3px; }
+      body.theme4 .clock .config .item:hover {
+        background: #ff8f00; }
+      body.theme4 .clock .config .item .submenu ul li.active, body.theme4 .clock .config .item .submenu ul li:hover {
+        background: #ff8f00; }
+    body.theme4 .current_date span {
+      color: #ff8f00; }
+    body.theme4 .current_date .face {
+      background: #ff8f00; }
 
 .main {
   overflow: hidden;
@@ -41,17 +237,15 @@ body {
   justify-content: center; }
 
 .clock {
-  border: solid 15px #c62828;
+  border: solid 1px #000;
   max-width: 300px;
   width: 300px;
   min-height: 300px;
   position: relative;
-  background-image: -webkit-radial-gradient(#fff, #FFF);
-  background-image: -khtml-radial-gradient(#fff, #FFF);
-  background-image: -moz-radial-gradient(#fff, #FFF);
-  background-image: -ms-radial-gradient(#fff, #FFF);
-  background-image: -o-radial-gradient(#fff, #FFF);
-  background-image: radial-gradient(#fff, #FFF);
+  background-image: url(../img/clock_radioactive.png);
+  background-position: 0 -1px;
+  background-size: 100%;
+  background-color: black;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -64,12 +258,18 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -khtml-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -moz-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -ms-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -o-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset; }
+  -webkit-transition: all 1s ease;
+  -khtml-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -khtml-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -moz-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -ms-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -o-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset; }
   .clock:after {
     position: absolute;
     -webkit-border-radius: 50%;
@@ -83,16 +283,42 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    display: none;
     bottom: 0;
     margin: auto;
     width: 80%;
     z-index: 0;
-    height: 80%; }
+    height: 80%;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+  .clock:before {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    content: '';
+    width: 100%;
+    min-height: 50px;
+    background-image: -webkit-radial-gradient(#111, transparent, transparent);
+    background-image: -khtml-radial-gradient(#111, transparent, transparent);
+    background-image: -moz-radial-gradient(#111, transparent, transparent);
+    background-image: -ms-radial-gradient(#111, transparent, transparent);
+    background-image: -o-radial-gradient(#111, transparent, transparent);
+    background-image: radial-gradient(#111, transparent, transparent);
+    -webkit-transform: rotatex(75deg);
+    -khtml-transform: rotatex(75deg);
+    -moz-transform: rotatex(75deg);
+    -ms-transform: rotatex(75deg);
+    -o-transform: rotatex(75deg);
+    transform: rotatex(75deg); }
   .clock .point {
     width: 30px;
     height: 30px;
-    background: #c62828;
-    z-index: 2;
+    background: #FF0;
+    z-index: 3;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -110,11 +336,17 @@ body {
     -moz-box-shadow: 2px 2px 6px #111;
     -ms-box-shadow: 2px 2px 6px #111;
     -o-box-shadow: 2px 2px 6px #111;
-    box-shadow: 2px 2px 6px #111; }
+    box-shadow: 2px 2px 6px #111;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
   .clock .minutes {
     height: 90px;
     width: 4px;
-    background: #323232;
+    background: #111;
     z-index: 1;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -128,16 +360,22 @@ body {
     -ms-transform-origin: bottom center;
     -o-transform-origin: bottom center;
     transform-origin: bottom center;
-    -webkit-border-radius: 50% 50% 0 0;
-    -khtml-border-radius: 50% 50% 0 0;
-    -moz-border-radius: 50% 50% 0 0;
-    -ms-border-radius: 50% 50% 0 0;
-    -o-border-radius: 50% 50% 0 0;
-    border-radius: 50% 50% 0 0; }
+    -webkit-box-shadow: 0 0 1px #FF0;
+    -khtml-box-shadow: 0 0 1px #FF0;
+    -moz-box-shadow: 0 0 1px #FF0;
+    -ms-box-shadow: 0 0 1px #FF0;
+    -o-box-shadow: 0 0 1px #FF0;
+    box-shadow: 0 0 1px #FF0;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
   .clock .hours {
     height: 60px;
     width: 4px;
-    background: #323232;
+    background: #111;
     z-index: 1;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -151,16 +389,22 @@ body {
     -ms-transform-origin: bottom center;
     -o-transform-origin: bottom center;
     transform-origin: bottom center;
-    -webkit-border-radius: 50% 50% 0 0;
-    -khtml-border-radius: 50% 50% 0 0;
-    -moz-border-radius: 50% 50% 0 0;
-    -ms-border-radius: 50% 50% 0 0;
-    -o-border-radius: 50% 50% 0 0;
-    border-radius: 50% 50% 0 0; }
+    -webkit-box-shadow: 0 0 1px #FF0;
+    -khtml-box-shadow: 0 0 1px #FF0;
+    -moz-box-shadow: 0 0 1px #FF0;
+    -ms-box-shadow: 0 0 1px #FF0;
+    -o-box-shadow: 0 0 1px #FF0;
+    box-shadow: 0 0 1px #FF0;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
   .clock .seconds {
     height: 100px;
-    width: 1px;
-    background: #c62828;
+    width: 2px;
+    background: #FF0;
     z-index: 2;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -174,6 +418,21 @@ body {
     -ms-transform-origin: bottom center;
     -o-transform-origin: bottom center;
     transform-origin: bottom center;
+    -webkit-transition: color 1s ease;
+    -khtml-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+    -webkit-box-shadow: 0 0 1px #111;
+    -khtml-box-shadow: 0 0 1px #111;
+    -moz-box-shadow: 0 0 1px #111;
+    -ms-box-shadow: 0 0 1px #111;
+    -o-box-shadow: 0 0 1px #111;
+    box-shadow: 0 0 1px #111; }
+  .clock .hours,
+  .clock .minutes,
+  .clock .seconds {
     -webkit-border-radius: 50% 50% 0 0;
     -khtml-border-radius: 50% 50% 0 0;
     -moz-border-radius: 50% 50% 0 0;
@@ -209,17 +468,29 @@ body {
       height: 35px;
       font-size: 34px;
       font-weight: bold;
-      color: #323232;
+      color: #fff;
       z-index: 1;
-      background: white;
-      font-family: 'Architects Daughter', cursive; }
+      background: transparent;
+      font-family: 'Architects Daughter', cursive;
+      -webkit-text-shadow: 0 0 1px #111;
+      -khtml-text-shadow: 0 0 1px #111;
+      -moz-text-shadow: 0 0 1px #111;
+      -ms-text-shadow: 0 0 1px #111;
+      -o-text-shadow: 0 0 1px #111;
+      text-shadow: 0 0 1px #111;
+      -webkit-transition: all 1s ease;
+      -khtml-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease; }
       .clock .numbers .number._12 {
         bottom: inherit;
-        top: 5px;
+        top: 10px;
         left: -3px; }
       .clock .numbers .number._6 {
         top: initial;
-        bottom: 15px;
+        bottom: 20px;
         left: -3px; }
       .clock .numbers .number._3 {
         left: initial;
@@ -231,31 +502,317 @@ body {
         top: 0px;
         padding-bottom: 10px;
         left: 10px; }
+  .clock .config {
+    position: absolute;
+    max-width: 50px;
+    top: -30px;
+    left: -100px;
+    cursor: pointer; }
+    .clock .config .item {
+      position: relative;
+      padding: .7rem .7rem .5rem;
+      background: #fff;
+      margin-bottom: .5rem;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease;
+      -khtml-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .clock .config .item:hover {
+        background: #FF0;
+        -webkit-box-shadow: 0 0 5px #111;
+        -khtml-box-shadow: 0 0 5px #111;
+        -moz-box-shadow: 0 0 5px #111;
+        -ms-box-shadow: 0 0 5px #111;
+        -o-box-shadow: 0 0 5px #111;
+        box-shadow: 0 0 5px #111; }
+        .clock .config .item:hover .submenu {
+          width: 110px;
+          height: auto; }
+        .clock .config .item:hover img {
+          -webkit-animation: rotate 5s infinite linear;
+          -khtml-animation: rotate 5s infinite linear;
+          -moz-animation: rotate 5s infinite linear;
+          -ms-animation: rotate 5s infinite linear;
+          -o-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear; }
+      .clock .config .item img {
+        max-width: 100%; }
+      .clock .config .item .submenu {
+        position: absolute;
+        left: 60%;
+        background: #fff;
+        top: 60%;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        z-index: 6;
+        -webkit-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -khtml-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -moz-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -ms-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -o-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -webkit-box-shadow: 0 0 5px #111;
+        -khtml-box-shadow: 0 0 5px #111;
+        -moz-box-shadow: 0 0 5px #111;
+        -ms-box-shadow: 0 0 5px #111;
+        -o-box-shadow: 0 0 5px #111;
+        box-shadow: 0 0 5px #111; }
+        .clock .config .item .submenu ul {
+          list-style: none; }
+          .clock .config .item .submenu ul li {
+            padding: .25rem;
+            text-align: center;
+            border-bottom: solid transparent thin;
+            -webkit-transition: all 1s ease;
+            -khtml-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease; }
+            .clock .config .item .submenu ul li:not(.header).active, .clock .config .item .submenu ul li:not(.header):hover {
+              background: #FF0;
+              border-color: #323232;
+              color: white;
+              text-shadow: 0 0 2px #111; }
+              .clock .config .item .submenu ul li:not(.header).active:last-child, .clock .config .item .submenu ul li:not(.header):hover:last-child {
+                border-bottom-color: transparent;
+                border-top-color: black; }
+            .clock .config .item .submenu ul li:not(.header).active {
+              border-top: solid thin black; }
+            .clock .config .item .submenu ul li:not(.header):last-child {
+              border-top: solid thin transparent; }
+            .clock .config .item .submenu ul li.header {
+              text-decoration: underline;
+              font-weight: bold;
+              cursor: default; }
+              .clock .config .item .submenu ul li.header:hover {
+                background: transparent; }
+  .clock.small {
+    border: solid 0 #c62828;
+    max-width: 200px;
+    width: 200px;
+    min-height: 200px; }
+    .clock.small .point {
+      width: 20px;
+      height: 20px; }
+    .clock.small .minutes {
+      height: 56.66667px; }
+    .clock.small .hours {
+      height: 41.66667px; }
+    .clock.small .seconds {
+      height: 66.66667px; }
+    .clock.small .numbers .number {
+      width: 25px;
+      height: 25px;
+      font-size: 24px; }
+      .clock.small .numbers .number._12 {
+        top: 4px;
+        left: 0px; }
+      .clock.small .numbers .number._6 {
+        bottom: 8px;
+        left: 0px; }
+      .clock.small .numbers .number._3 {
+        right: 6px;
+        top: 0px;
+        padding-bottom: 5px; }
+      .clock.small .numbers .number._9 {
+        top: 0px;
+        padding-bottom: 5px;
+        left: 6px; }
+  .clock.big {
+    border: solid 0 #c62828;
+    max-width: 400px;
+    width: 400px;
+    min-height: 400px; }
+    .clock.big .point {
+      width: 40px;
+      height: 40px; }
+    .clock.big .minutes {
+      height: 123.33333px; }
+    .clock.big .hours {
+      height: 93.33333px; }
+    .clock.big .seconds {
+      height: 133.33333px; }
+    .clock.big .numbers .number {
+      width: 45px;
+      height: 45px;
+      font-size: 44px; }
+      .clock.big .numbers .number._12 {
+        top: 9px;
+        left: 4px; }
+      .clock.big .numbers .number._6 {
+        bottom: 18px;
+        left: 4px; }
+      .clock.big .numbers .number._3 {
+        right: 15px;
+        top: -6px;
+        padding-bottom: 10px; }
+      .clock.big .numbers .number._9 {
+        top: -6px;
+        padding-bottom: 10px;
+        left: 15px; }
 
 .current_date {
   position: absolute;
   top: 15px;
-  background: #fefefe;
   padding: .51rem 0;
   margin: auto;
   left: 0px;
   right: 0;
   text-align: center;
-  border: solid 1px #111;
+  border: solid 1px transparent;
+  background: rgba(255, 255, 255, 0.5);
   font-weight: bold;
   display: inline;
   max-width: 190px;
   min-height: 60px;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px; }
-  .current_date span {
-    font-weight: normal;
-    color: #c62828; }
+  z-index: 10;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
+  -khtml-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
+  -moz-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
+  -ms-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
+  -o-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
+  transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95); }
+  .current_date:hover .face._1, .current_date:hover .face._3 {
+    width: 100%; }
+  .current_date:hover .face._2, .current_date:hover .face._4 {
+    height: 100%; }
   .current_date h1, .current_date span {
-    font-size: 13px; }
+    font-size: 14px;
+    color: black;
+    font-weight: bold; }
+  .current_date span {
+    color: #FF0;
+    -webkit-transition: color 1s ease;
+    -khtml-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+    -webkit-text-shadow: 0 0 1px #323232;
+    -khtml-text-shadow: 0 0 1px #323232;
+    -moz-text-shadow: 0 0 1px #323232;
+    -ms-text-shadow: 0 0 1px #323232;
+    -o-text-shadow: 0 0 1px #323232;
+    text-shadow: 0 0 1px #323232; }
+  .current_date .face {
+    position: absolute;
+    background: #FF0;
+    -webkit-transition: all 0.71s ease;
+    -khtml-transition: all 0.71s ease;
+    -moz-transition: all 0.71s ease;
+    -ms-transition: all 0.71s ease;
+    -o-transition: all 0.71s ease;
+    transition: all 0.71s ease; }
+    .current_date .face._1 {
+      width: 0;
+      height: 3px;
+      top: 0;
+      left: 0; }
+    .current_date .face._2 {
+      width: 3px;
+      height: 0;
+      top: 0;
+      right: 0; }
+    .current_date .face._3 {
+      width: 0;
+      height: 3px;
+      bottom: 0;
+      right: 0; }
+    .current_date .face._4 {
+      width: 3px;
+      height: 0;
+      bottom: 0;
+      left: 0; }
+
+@media (max-width: 500px) {
+  .clock .config {
+    left: -20px; }
+    .clock .config ul.size li:last-child {
+      display: none; }
+  .clock.small .config {
+    left: -60px; } }
+@keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-webkit-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-moz-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-ms-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
 
 /*# sourceMappingURL=main.css.map */

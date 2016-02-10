@@ -164,6 +164,329 @@
   font-weight: $weight;
 }
 
+// Funtion to set text shadow
+@mixin text-shadow($value) {
+  @include prefixes(text-shadow , $value);
+}
+
+// Funtion to set differerents themes
+@mixin themes(){
+  &.theme2{
+    @include gradient(radial, (#e3f2fd , #90caf9));
+
+    .clock{
+      border: solid ($clock / 30) #90caf9 ;
+      background-image: url(../img/js_clock.png);
+      background-position: 0;
+      background-color: white;
+
+      &:after{
+        display: block;
+      }
+
+      .hours,
+      .minutes,
+      .seconds{
+        @include border-radius(30% 30% 0 0);
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_blue ;    
+      }
+
+      .hours,
+      .minutes{
+        @include box-shadow(0 0 1px $dark_blue);
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          font-size: 30px;
+          padding: 0 .5rem ; 
+          font-family: 'Signika', sans-serif;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      &.small{
+        .numbers{
+          .number{
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+
+            &._12{
+              top: 5px;
+            }
+
+            &._12,
+            &._6{
+              padding: 0 .5rem;
+            }
+
+            &._3,
+            &._9{
+              padding: .2rem 0 .5rem;
+            }
+          }
+        }
+      }
+
+      &.big{
+        .numbers{
+          .number{
+            font-size: 36px;
+
+            &._12{
+              top: 16px;
+            }
+          }
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_blue;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_blue;
+      }
+
+      .face{
+        background: $dark_blue;
+      }
+    }
+  }
+  &.theme3{
+    @include gradient(radial, (#c8e6c9 , #43a047));
+
+    .clock{
+      border: solid ($clock / 30) $dark_green ;
+      background: white;
+      @include box-shadow((0 0 15px 1px rgba(0,0,0,7), 0 0 4px 1px rgba(0,0,0,7) inset));
+
+      &:after{
+        display: block;
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_green;    
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          font-family: 'Kreon', serif;
+          font-size: 32px;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_green;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_green;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.small{
+        .numbers{
+          .number{
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+
+            &._12{
+              top: 5px;
+            }
+
+            &._12,
+            &._6{
+              padding: 0 .5rem;
+            }
+
+            &._3,
+            &._9{
+              padding: .2rem 0 .5rem;
+            }
+          }
+        }
+      }
+
+      &.big{
+        .numbers{
+          .number{
+            font-size: 36px;
+
+            &._12{
+              top: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_green;
+      }
+
+      .face{
+        background: $dark_green;
+      }
+    }
+  }
+  &.theme4{
+    @include gradient(radial, (#ffecb3 , #ffd54f ));
+
+    .clock{
+      border: solid ($clock / 30 + 5) $dark_orange ;
+      background-image: url(../img/html.png);
+      background-position: 0;
+      background-color: white;
+      border-color: #ffd54f;
+      @include box-shadow((0 0 7px rgba(0,0,0,.4),0 0 7px rgba(0,0,0,.4) inset));
+
+      .point,
+      .seconds{   
+        background: $dark_orange;   
+      }
+
+      .hours,
+      .minutes,
+      .seconds{
+        @include border-radius(30% 30% 0 0);
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: transparent;
+          @include text-shadow(0 0 1px #ccc);
+          font-family: 'Signika', sans-serif;
+          font-weight: 600;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      &.small{
+        .hours,
+        .minutes{
+          width: 3px;
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_orange;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_orange;
+      }
+
+      .face{
+        background: $dark_orange;
+      }
+    }
+  }
+}
+
 // Funtion to set transition
 @mixin transition($value) {
   @include prefixes(transition, $value);

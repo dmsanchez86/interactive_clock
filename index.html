@@ -3,30 +3,35 @@
 <head>
 	<!-- Meta Tags -->
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	<!-- Page Title -->
 	<title>Interactive Clock</title>
 
 	<!-- Stylesheets Lybraries -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css?ver=vxr67">
 
 </head>
-<body>
+<body class="">
 	<div class="current_date">
 		<h1>
-			Current Time
-			<span class="hour"></span><span> : </span>
-			<span class="minute"></span><span> : </span>
-			<span class="second"></span>
+			<b>Current Time</b>
+			<span class="hour">00</span><span> : </span>
+			<span class="minute">00</span><span> : </span>
+			<span class="second">00</span>
 		</h1>
 		<h1>
-			Day Week
-			<span class="day_week"></span>
+			<b>Day Week</b>
+			<span class="day_week">Day_week</span>
 		</h1>
 		<h1>
-			Year
-			<span class="year"></span>
+			<b>Year</b>
+			<span class="year">0000</span>
 		</h1>
+		<div class="face _1"></div>
+		<div class="face _2"></div>
+		<div class="face _3"></div>
+		<div class="face _4"></div>
 	</div>
 
 	<div class="main">
@@ -40,6 +45,41 @@
 				<span class="number _3">3</span>
 				<span class="number _6">6</span>
 				<span class="number _9">9</span>
+			</div>
+			<div class="config">
+				<div class="item">
+					<img src="http://findicons.com/files/icons/1684/ravenna/256/settings.png">
+					<div class="submenu">
+						<ul class="theme">
+							<li class="header">Change Clock</li>
+							<li theme="1" class="active">Radioactive</li>
+							<li theme="2">Node JS</li>
+							<li theme="3">Classic</li>
+							<li theme="4">HTML</li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<img src="http://cdn.1001freedownloads.com/icon/thumb/873/maximize-512.png">
+					<div class="submenu">
+						<ul class="size">
+							<li class="header">Size Clock</li>
+							<li class="size" size="small">Small</li>
+							<li class="size active" size="medium">Medium</li>
+							<li class="size" size="big">Big</li>
+						</ul>
+					</div>
+				</div>
+				<div class="item">
+					<img src="http://www.madridwritersclub.com/wp-content/uploads/2014/10/icon_16718.png">
+					<div class="submenu">
+						<ul class="language">
+							<li class="header">Language</li>
+							<li class="language active" language="english">English</li>
+							<li class="language" language="spanish">Spanish</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
