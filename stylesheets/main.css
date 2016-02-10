@@ -196,7 +196,13 @@ body {
     margin: auto;
     width: 80%;
     z-index: 0;
-    height: 80%; }
+    height: 80%;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
   .clock:before {
     position: absolute;
     top: 110%;
@@ -476,6 +482,7 @@ body {
           .clock .config .item .submenu ul li {
             padding: .25rem;
             text-align: center;
+            border-bottom: solid transparent thin;
             -webkit-transition: all 1s ease;
             -khtml-transition: all 1s ease;
             -moz-transition: all 1s ease;
@@ -484,8 +491,16 @@ body {
             transition: all 1s ease; }
             .clock .config .item .submenu ul li:not(.header).active, .clock .config .item .submenu ul li:not(.header):hover {
               background: #FF0;
+              border-color: #323232;
               color: white;
               text-shadow: 0 0 2px #111; }
+              .clock .config .item .submenu ul li:not(.header).active:last-child, .clock .config .item .submenu ul li:not(.header):hover:last-child {
+                border-bottom-color: transparent;
+                border-top-color: black; }
+            .clock .config .item .submenu ul li:not(.header).active {
+              border-top: solid thin black; }
+            .clock .config .item .submenu ul li:not(.header):last-child {
+              border-top: solid thin transparent; }
             .clock .config .item .submenu ul li.header {
               text-decoration: underline;
               font-weight: bold;
@@ -570,12 +585,21 @@ body {
   display: inline;
   max-width: 190px;
   min-height: 60px;
+  z-index: 10;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .current_date:hover {
+    background: white; }
   .current_date h1, .current_date span {
     font-size: 13px;
     color: black;
@@ -613,6 +637,36 @@ body {
     -o-transform: scale(0.7) rotate(360deg);
     transform: scale(0.7) rotate(360deg); } }
 @-webkit-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-moz-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-ms-keyframes rotate {
   0%, 100% {
     -webkit-transform: scale(1) rotate(0);
     -khtml-transform: scale(1) rotate(0);

@@ -169,6 +169,183 @@
   @include prefixes(text-shadow , $value);
 }
 
+// Funtion to set differerents themes
+@mixin themes(){
+  &.theme2{
+    @include gradient(radial, (#e3f2fd , #90caf9));
+
+    .clock{
+      border-color: $dark_blue ;
+      background-image: url(../img/js_clock.png);
+      background-position: 0;
+
+      &:after{
+        display: block;
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_blue ;    
+      }
+
+      .hours,
+      .minutes{
+        @include box-shadow(0 0 1px $dark_blue);
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          @include text-shadow(0 0 1px #ccc);
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_blue;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_blue;
+      }
+    }
+  }
+  &.theme3{
+    @include gradient(radial, (#c8e6c9 , #43a047));
+
+    .clock{
+      border: solid ($clock / 30) $dark_green ;
+      background: white;
+      @include box-shadow((0 0 15px 1px rgba(0,0,0,7), 0 0 4px 1px rgba(0,0,0,7) inset));
+
+      &:after{
+        display: block;
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_green;    
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          @include text-shadow(0 0 1px #ccc);
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_green;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_green;
+      }
+    }
+  }
+  &.theme4{
+    @include gradient(radial, (#ffecb3 , #ffd54f ));
+
+    .clock{
+      border: solid ($clock / 30) $dark_orange ;
+      background-image: url(../img/html.png);
+      background-position: 0;
+      background-color: white;
+
+      .point,
+      .seconds{   
+        background: $dark_orange;   
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: transparent;
+          @include text-shadow(0 0 1px #ccc);
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_orange;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_orange;
+      }
+    }
+  }
+}
+
 // Funtion to set transition
 @mixin transition($value) {
   @include prefixes(transition, $value);

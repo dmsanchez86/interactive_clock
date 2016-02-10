@@ -22,6 +22,12 @@ $().ready(function(){
 	var initial = true;
 	var step_seconds = 0, step_minutes = 0, step_hours = 30;
 
+	if ($(window).width() < 500) {
+		$('.clock').addClass("small");
+		$('.config ul.size li:not(.header)').removeClass('active');
+		$('.config ul.size li:not(.header)').eq(0).addClass('active');
+	}
+
 	var $current_date = $('.current_date');
 	//$current_date.html(new Date);
 

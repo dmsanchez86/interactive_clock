@@ -1,0 +1,21 @@
+@media (max-width: 500px){
+	.clock{
+		.config{
+			left: -20px;
+
+			ul.size{
+				li{
+					&:last-child{
+						display: none;
+					};
+				}
+			}
+		}
+
+		&.small{
+			.config{
+				left: -60px;
+			}
+		}
+	}
+}
