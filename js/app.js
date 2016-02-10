@@ -4,6 +4,11 @@ var App = {
 	current_language: null,
 	current_minutes: null,
 	current_seconds: null,
+	settings: {
+		theme: null,
+		size: null,
+		language: null,
+	},
 	language: {
 		english: {
 			words: {
@@ -86,6 +91,36 @@ var App = {
 
 $().ready(function(){
 
+	var $current_date = $('.current_date');
+
+	// settings prev configure
+	if(localStorage.getItem('settings') != undefined){
+
+		App.settings = JSON.parse(localStorage.getItem('settings'));
+
+		change_favicon(App.settings.theme);
+
+		$('body').removeClass('theme1 theme2 theme3 theme4');
+		$('body').addClass(App.settings.theme);
+
+		$('.clock').removeClass('small medium big');
+		$('.clock').addClass(App.settings.size);
+
+		translate_app(App.settings.language);
+
+		$('.config ul.theme li:not(.header)').removeClass('active');
+		$('.config ul.theme li[theme="' + App.settings.theme.slice(-1) + '"]').addClass('active');
+
+		if(App.settings.size != undefined) {
+			$('.config ul.size li:not(.header)').removeClass('active');
+			$('.config ul.size li[size="' + App.settings.size + '"]').addClass('active');
+		} 
+		if(App.settings.language != undefined){
+			$('.config ul.language li:not(.header)').removeClass('active');
+			$('.config ul.language li[language="' + App.settings.language + '"]').addClass('active');
+		} 
+	}
+
 	var $seconds = $('.seconds');
 	var $minutes = $('.minutes');
 	var $hours = $('.hours');
@@ -98,7 +133,6 @@ $().ready(function(){
 		$('.config ul.size li:not(.header)').eq(0).addClass('active');
 	}
 
-	var $current_date = $('.current_date');
 	App.current_language = 'english';
 	//$current_date.html(new Date);
 
@@ -183,6 +217,9 @@ $().ready(function(){
 
 		var theme = "theme"+$(this).attr('theme'); 
 
+		App.settings.theme = theme;
+		localStorage.setItem('settings', JSON.stringify(App.settings));
+
 		change_favicon(theme);
 
 		$('body').removeClass('theme1 theme2 theme3 theme4');
@@ -196,6 +233,9 @@ $().ready(function(){
 
 		var size = $(this).attr('size');
 
+		App.settings.size = size;
+		localStorage.setItem('settings', JSON.stringify(App.settings));
+
 		$('.clock').removeClass('small medium big');
 		$('.clock').addClass(size);
 	});
@@ -207,6 +247,9 @@ $().ready(function(){
 		$(this).addClass('active');
 
 		var language = $(this).attr('language');
+
+		App.settings.language = language;
+		localStorage.setItem('settings', JSON.stringify(App.settings));
 
 		translate_app(language);
 	});

@@ -684,6 +684,8 @@ body {
         top: -6px;
         padding-bottom: 10px;
         left: 15px; }
+    .clock.big .config {
+      left: -58px; }
 
 .current_date {
   position: absolute;
