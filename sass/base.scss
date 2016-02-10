@@ -30,20 +30,22 @@ body{
 			}
 
 			.config{
+				.item{
 
-				&:hover{
-					background: $dark_blue;
-				}
+					&:hover{
+						background: $dark_blue;
+					}
 
-				.submenu{
+					.submenu{
 
-					ul{
+						ul{
 
-						li{
+							li{
 
-							&.active,
-							&:hover{
-								background: $dark_blue;
+								&.active,
+								&:hover{
+									background: $dark_blue;
+								}
 							}
 						}
 					}
@@ -68,20 +70,22 @@ body{
 			}
 
 			.config{
+				.item{
 
-				&:hover{
-					background: $dark_green;
-				}
+					&:hover{
+						background: $dark_green;
+					}
 
-				.submenu{
+					.submenu{
 
-					ul{
+						ul{
 
-						li{
+							li{
 
-							&.active,
-							&:hover{
-								background: $dark_green;
+								&.active,
+								&:hover{
+									background: $dark_green;
+								}
 							}
 						}
 					}
@@ -106,20 +110,22 @@ body{
 			}
 
 			.config{
+				.item{
 
-				&:hover{
-					background: $dark_orange;
-				}
+					&:hover{
+						background: $dark_orange;
+					}
 
-				.submenu{
+					.submenu{
 
-					ul{
+						ul{
 
-						li{
+							li{
 
-							&.active,
-							&:hover{
-								background: $dark_orange;
+								&.active,
+								&:hover{
+									background: $dark_orange;
+								}
 							}
 						}
 					}
@@ -194,6 +200,7 @@ body{
 		@include box-shadow(2px 2px 6px $black);
 		@include transition(all 1s ease);
 	}  
+
 	.minutes{
 		height: ($clock / 3 - 10);
 		width: 4px;
@@ -203,6 +210,7 @@ body{
 		@include transform-origin(bottom center);
 		@include border-radius(50% 50% 0 0);
 	}
+
 	.hours{
 		height: ($clock / 3 - 40);
 		width: 4px;
@@ -212,6 +220,7 @@ body{
 		@include transform-origin(bottom center);
 		@include border-radius(50% 50% 0 0);
 	}
+
 	.seconds{
 		height: ($clock / 3 );
 		width: 2px;
@@ -294,56 +303,182 @@ body{
 		top: -30px;
 		left: -100px;
 		cursor: pointer;
-		background: $white;
-		z-index: 5;
-		padding: .7rem .7rem .5rem;
-		@include transition(all .5s ease);
-		@include border-radius(50%);
 
-		&:hover{
-			background: $dark_red;
-			@include box-shadow(0 0 5px #111);
+		.item{
+			position: relative;
+			padding: .7rem .7rem .5rem;
+			background: $white;
+			margin-bottom: .5rem;
+			@include border-radius(50%);
+			@include transition(all .5s ease);
 
-			.submenu{
-				width: 80px;
-				height: 115px;
+			&:hover{
+				background: $dark_red;
+				@include box-shadow(0 0 5px #111);
+
+				.submenu{
+					width: 110px;
+					height: auto;
+				}
+
+				img{
+					@include animation(rotate 5s infinite linear);
+				}
 			}
 
 			img{
-				@include animation(rotate 5s infinite linear);
+				max-width: 100%;
+			}
+
+			.submenu{
+				position: absolute;
+				left: 60%;
+				background: $white;
+				top: 60%;
+				overflow: hidden;
+				width: 0;
+				height: 0;
+				z-index: 6;
+				@include border-radius(5px);
+				@include transition((width .25s ease, height .15s .2s ease));
+				@include box-shadow(0 0 5px #111);
+
+				ul{
+					list-style: none;
+
+					li{
+						padding: .25rem;
+						text-align: center;
+						@include transition(all 1s ease);
+
+						&:not(.header){
+							&.active,
+							&:hover{
+								background: $dark_red;
+								color: white;
+								text-shadow: 0 0 2px $black;
+							}
+						}
+
+						&.header{
+							text-decoration: underline;
+							font-weight: bold;
+							cursor: default;
+						}
+
+					}
+				}
 			}
 		}
+	}
 
-		img{
-			max-width: 100%;
+	&.small{
+		$clock: 200px;
+		border: solid ($clock / 30 + 5) $dark_red ;
+		max-width: $clock;
+		width: $clock;
+		min-height: $clock;
+
+		.point{
+			width: ($clock / 10);
+			height: ($clock / 10);
+		}  
+
+		.minutes{
+			height: ($clock / 3 - 10);
 		}
 
-		.submenu{
-			position: absolute;
-			left: 60%;
-			background: $white;
-			top: 60%;
-			overflow: hidden;
-			width: 0;
-			height: 0;
-			@include border-radius(5px);
-			@include transition((width .25s ease, height .15s .2s ease));
-			@include box-shadow(0 0 5px #111);
+		.hours{
+			height: ($clock / 3 - 25);
+		}
 
-			ul{
-				list-style: none;
+		.seconds{
+			height: ($clock / 3 );
+		}
 
-				li{
-					padding: .25rem;
-					text-align: center;
-					@include transition(all 1s ease);
+		.numbers{
 
-					&.active,
-					&:hover{
-						background: $dark_red;
-						color: white;
-						text-shadow: 0 0 2px $black;
-					}
+			.number{
+				width: $clock / 10 + 5;
+				height: $clock / 10 + 5;
+				font-size: $clock / 10 + 4;
+
+				&._12{
+					top: 4px;
+					left: 0px;
+				}
+
+				&._6{
+					bottom: 8px;
+					left: 0px;
+				}
+
+				&._3{
+					right: 6px;
+					top: 0px;
+					padding-bottom: 5px;
+				}
+
+				&._9{
+					top: 0px;
+					padding-bottom: 5px;
+					left: 6px;
+				}
+			}
+		}
+	}
+
+	&.big{
+		$clock: 400px;
+		border: solid ($clock / 30 + 5) $dark_red ;
+		max-width: $clock;
+		width: $clock;
+		min-height: $clock;
+
+		.point{
+			width: ($clock / 10);
+			height: ($clock / 10);
+		}  
+
+		.minutes{
+			height: ($clock / 3 - 10);
+		}
+
+		.hours{
+			height: ($clock / 3 - 40);
+		}
+
+		.seconds{
+			height: ($clock / 3 );
+		}
+
+		.numbers{
+
+			.number{
+				width: $clock / 10 + 5;
+				height: $clock / 10 + 5;
+				font-size: $clock / 10 + 4;
+
+				&._12{
+					top: 4px;
+					left: 0px;
+				}
+
+				&._6{
+					bottom: 8px;
+					left: 0px;
+				}
+
+				&._3{
+					right: 6px;
+					top: 0px;
+					padding-bottom: 5px;
+				}
+
+				&._9{
+					top: 0px;
+					padding-bottom: 5px;
+					left: 6px;
 				}
 			}
 		}

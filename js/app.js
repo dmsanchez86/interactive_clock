@@ -95,14 +95,25 @@ $().ready(function(){
 	}, 1000); 
 
 	// click on the list differents clocks
-	$('.config ul li').unbind('click').click(function(){
-		$('.config ul li').removeClass('active');
+	$('.config ul.theme li:not(.header)').unbind('click').click(function(){
+		$('.config ul.theme li:not(.header)').removeClass('active');
 		$(this).addClass('active');
 
 		var theme = "theme"+$(this).attr('theme');
 
 		$('body').removeClass('theme1 theme2 theme3 theme4');
 		$('body').addClass(theme);
+	});
+
+	// click on the list differents sizes clocks
+	$('.config ul.size li:not(.header)').unbind('click').click(function(){
+		$('.config ul.size li:not(.header)').removeClass('active');
+		$(this).addClass('active');
+
+		var size = $(this).attr('size');
+
+		$('.clock').removeClass('small medium big');
+		$('.clock').addClass(size);
 	});
 
 });

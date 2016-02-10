@@ -23,9 +23,9 @@ body {
     body.theme2 .clock .point,
     body.theme2 .clock .seconds {
       background: #1e88e5; }
-    body.theme2 .clock .config:hover {
+    body.theme2 .clock .config .item:hover {
       background: #1e88e5; }
-    body.theme2 .clock .config .submenu ul li.active, body.theme2 .clock .config .submenu ul li:hover {
+    body.theme2 .clock .config .item .submenu ul li.active, body.theme2 .clock .config .item .submenu ul li:hover {
       background: #1e88e5; }
   body.theme2 .current_date span {
     color: #1e88e5; }
@@ -34,9 +34,9 @@ body {
     body.theme3 .clock .point,
     body.theme3 .clock .seconds {
       background: #7cb342; }
-    body.theme3 .clock .config:hover {
+    body.theme3 .clock .config .item:hover {
       background: #7cb342; }
-    body.theme3 .clock .config .submenu ul li.active, body.theme3 .clock .config .submenu ul li:hover {
+    body.theme3 .clock .config .item .submenu ul li.active, body.theme3 .clock .config .item .submenu ul li:hover {
       background: #7cb342; }
   body.theme3 .current_date span {
     color: #7cb342; }
@@ -45,9 +45,9 @@ body {
     body.theme4 .clock .point,
     body.theme4 .clock .seconds {
       background: #ff8f00; }
-    body.theme4 .clock .config:hover {
+    body.theme4 .clock .config .item:hover {
       background: #ff8f00; }
-    body.theme4 .clock .config .submenu ul li.active, body.theme4 .clock .config .submenu ul li:hover {
+    body.theme4 .clock .config .item .submenu ul li.active, body.theme4 .clock .config .item .submenu ul li:hover {
       background: #ff8f00; }
   body.theme4 .current_date span {
     color: #ff8f00; }
@@ -306,83 +306,154 @@ body {
     max-width: 50px;
     top: -30px;
     left: -100px;
-    cursor: pointer;
-    background: #fff;
-    z-index: 5;
-    padding: .7rem .7rem .5rem;
-    -webkit-transition: all 0.5s ease;
-    -khtml-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    -webkit-border-radius: 50%;
-    -khtml-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%; }
-    .clock .config:hover {
-      background: #c62828;
-      -webkit-box-shadow: 0 0 5px #111;
-      -khtml-box-shadow: 0 0 5px #111;
-      -moz-box-shadow: 0 0 5px #111;
-      -ms-box-shadow: 0 0 5px #111;
-      -o-box-shadow: 0 0 5px #111;
-      box-shadow: 0 0 5px #111; }
-      .clock .config:hover .submenu {
-        width: 80px;
-        height: 115px; }
-      .clock .config:hover img {
-        -webkit-animation: rotate 5s infinite linear;
-        -khtml-animation: rotate 5s infinite linear;
-        -moz-animation: rotate 5s infinite linear;
-        -ms-animation: rotate 5s infinite linear;
-        -o-animation: rotate 5s infinite linear;
-        animation: rotate 5s infinite linear; }
-    .clock .config img {
-      max-width: 100%; }
-    .clock .config .submenu {
-      position: absolute;
-      left: 60%;
+    cursor: pointer; }
+    .clock .config .item {
+      position: relative;
+      padding: .7rem .7rem .5rem;
       background: #fff;
-      top: 60%;
-      overflow: hidden;
-      width: 0;
-      height: 0;
-      -webkit-border-radius: 5px;
-      -khtml-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-transition: width 0.25s ease, height 0.15s 0.2s ease;
-      -khtml-transition: width 0.25s ease, height 0.15s 0.2s ease;
-      -moz-transition: width 0.25s ease, height 0.15s 0.2s ease;
-      -ms-transition: width 0.25s ease, height 0.15s 0.2s ease;
-      -o-transition: width 0.25s ease, height 0.15s 0.2s ease;
-      transition: width 0.25s ease, height 0.15s 0.2s ease;
-      -webkit-box-shadow: 0 0 5px #111;
-      -khtml-box-shadow: 0 0 5px #111;
-      -moz-box-shadow: 0 0 5px #111;
-      -ms-box-shadow: 0 0 5px #111;
-      -o-box-shadow: 0 0 5px #111;
-      box-shadow: 0 0 5px #111; }
-      .clock .config .submenu ul {
-        list-style: none; }
-        .clock .config .submenu ul li {
-          padding: .25rem;
-          text-align: center;
-          -webkit-transition: all 1s ease;
-          -khtml-transition: all 1s ease;
-          -moz-transition: all 1s ease;
-          -ms-transition: all 1s ease;
-          -o-transition: all 1s ease;
-          transition: all 1s ease; }
-          .clock .config .submenu ul li.active, .clock .config .submenu ul li:hover {
-            background: #c62828;
-            color: white;
-            text-shadow: 0 0 2px #323232; }
+      margin-bottom: .5rem;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.5s ease;
+      -khtml-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .clock .config .item:hover {
+        background: #c62828;
+        -webkit-box-shadow: 0 0 5px #111;
+        -khtml-box-shadow: 0 0 5px #111;
+        -moz-box-shadow: 0 0 5px #111;
+        -ms-box-shadow: 0 0 5px #111;
+        -o-box-shadow: 0 0 5px #111;
+        box-shadow: 0 0 5px #111; }
+        .clock .config .item:hover .submenu {
+          width: 110px;
+          height: auto; }
+        .clock .config .item:hover img {
+          -webkit-animation: rotate 5s infinite linear;
+          -khtml-animation: rotate 5s infinite linear;
+          -moz-animation: rotate 5s infinite linear;
+          -ms-animation: rotate 5s infinite linear;
+          -o-animation: rotate 5s infinite linear;
+          animation: rotate 5s infinite linear; }
+      .clock .config .item img {
+        max-width: 100%; }
+      .clock .config .item .submenu {
+        position: absolute;
+        left: 60%;
+        background: #fff;
+        top: 60%;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        z-index: 6;
+        -webkit-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -khtml-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -moz-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -ms-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -o-transition: width 0.25s ease, height 0.15s 0.2s ease;
+        transition: width 0.25s ease, height 0.15s 0.2s ease;
+        -webkit-box-shadow: 0 0 5px #111;
+        -khtml-box-shadow: 0 0 5px #111;
+        -moz-box-shadow: 0 0 5px #111;
+        -ms-box-shadow: 0 0 5px #111;
+        -o-box-shadow: 0 0 5px #111;
+        box-shadow: 0 0 5px #111; }
+        .clock .config .item .submenu ul {
+          list-style: none; }
+          .clock .config .item .submenu ul li {
+            padding: .25rem;
+            text-align: center;
+            -webkit-transition: all 1s ease;
+            -khtml-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease; }
+            .clock .config .item .submenu ul li:not(.header).active, .clock .config .item .submenu ul li:not(.header):hover {
+              background: #c62828;
+              color: white;
+              text-shadow: 0 0 2px #323232; }
+            .clock .config .item .submenu ul li.header {
+              text-decoration: underline;
+              font-weight: bold;
+              cursor: default; }
+  .clock.small {
+    border: solid 11.66667px #c62828;
+    max-width: 200px;
+    width: 200px;
+    min-height: 200px; }
+    .clock.small .point {
+      width: 20px;
+      height: 20px; }
+    .clock.small .minutes {
+      height: 56.66667px; }
+    .clock.small .hours {
+      height: 41.66667px; }
+    .clock.small .seconds {
+      height: 66.66667px; }
+    .clock.small .numbers .number {
+      width: 25px;
+      height: 25px;
+      font-size: 24px; }
+      .clock.small .numbers .number._12 {
+        top: 4px;
+        left: 0px; }
+      .clock.small .numbers .number._6 {
+        bottom: 8px;
+        left: 0px; }
+      .clock.small .numbers .number._3 {
+        right: 6px;
+        top: 0px;
+        padding-bottom: 5px; }
+      .clock.small .numbers .number._9 {
+        top: 0px;
+        padding-bottom: 5px;
+        left: 6px; }
+  .clock.big {
+    border: solid 18.33333px #c62828;
+    max-width: 400px;
+    width: 400px;
+    min-height: 400px; }
+    .clock.big .point {
+      width: 40px;
+      height: 40px; }
+    .clock.big .minutes {
+      height: 123.33333px; }
+    .clock.big .hours {
+      height: 93.33333px; }
+    .clock.big .seconds {
+      height: 133.33333px; }
+    .clock.big .numbers .number {
+      width: 45px;
+      height: 45px;
+      font-size: 44px; }
+      .clock.big .numbers .number._12 {
+        top: 4px;
+        left: 0px; }
+      .clock.big .numbers .number._6 {
+        bottom: 8px;
+        left: 0px; }
+      .clock.big .numbers .number._3 {
+        right: 6px;
+        top: 0px;
+        padding-bottom: 5px; }
+      .clock.big .numbers .number._9 {
+        top: 0px;
+        padding-bottom: 5px;
+        left: 6px; }
 
 .current_date {
   position: absolute;
