@@ -173,6 +173,17 @@ body{
 		height: 80%;
 	}
 
+	&:before{
+		position: absolute;
+		top: 120%;
+		left: 0;
+		content: '';
+		width: 100%;
+		min-height: 50px;
+		@include gradient(radial, (#111, transparent, transparent));
+		@include transform(rotatex(75deg));
+	}
+
 	.point{
 		width: ($clock / 10);
 		height: ($clock / 10);
