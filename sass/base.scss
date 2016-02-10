@@ -17,16 +17,38 @@ html{
 }
 
 body{
-	@include gradient(radial, ($gray, $light_gray));
+	@include gradient(radial, (#fff, #ccc));
 	position: relative;
 
 	&.theme2{
+		@include gradient(radial, (#e3f2fd , #90caf9));
+
 		.clock{
 			border-color: $dark_blue ;
+			background-image: url(../img/js_clock.png);
+			background-position: 0;
+
+			&:after{
+				display: block;
+			}
 
 			.point,
 			.seconds{		
 				background: $dark_blue ;		
+			}
+
+			.hours,
+			.minutes{
+				@include box-shadow(0 0 1px $dark_blue);
+			}
+
+			.numbers{
+
+				.number{
+					color: $black;
+					background: white;
+					@include text-shadow(0 0 1px #ccc);
+				}
 			}
 
 			.config{
@@ -61,12 +83,29 @@ body{
 		}
 	}
 	&.theme3{
+		@include gradient(radial, (#c8e6c9 , #43a047));
+
 		.clock{
-			border-color: $dark_green;
+			border: solid ($clock / 30) $dark_green ;
+			background: white;
+			@include box-shadow((0 0 15px 1px rgba(0,0,0,7), 0 0 4px 1px rgba(0,0,0,7) inset));
+
+			&:after{
+				display: block;
+			}
 
 			.point,
 			.seconds{		
 				background: $dark_green;		
+			}
+
+			.numbers{
+
+				.number{
+					color: $black;
+					background: white;
+					@include text-shadow(0 0 1px #ccc);
+				}
 			}
 
 			.config{
@@ -101,12 +140,26 @@ body{
 		}
 	}
 	&.theme4{
+		@include gradient(radial, (#ffecb3 , #ffd54f ));
+
 		.clock{
-			border-color: $dark_orange;
+			border: solid ($clock / 30) $dark_orange ;
+			background-image: url(../img/html.png);
+			background-position: 0;
+			background-color: white;
 
 			.point,
 			.seconds{		
 				background: $dark_orange;		
+			}
+
+			.numbers{
+
+				.number{
+					color: $black;
+					background: transparent;
+					@include text-shadow(0 0 1px #ccc);
+				}
 			}
 
 			.config{
@@ -153,16 +206,18 @@ body{
 }
 
 .clock{
-	border: solid ($clock / 30 + 5) $dark_red ;
+	border: solid 0 $dark_red ;
 	max-width: $clock;
 	width: $clock;
 	min-height: $clock;
 	position: relative;
-	@include gradient(radial, ($white, $white));
+	background-image: url(../img/clock_radioactive.png);
+	background-position: 0 -1px;
+	background-size: 100%;
 	@include box-sizing(border-box);
 	@include border-radius(50%);
 	@include transition(all 1s ease);
-	@include box-shadow((0 0 15px 1px rgba(0,0,0,.7), 0 0 4px 1px rgba(0,0,0,.7) inset));
+	@include box-shadow((0 0 15px 1px rgba(0,0,0,0), 0 0 4px 1px rgba(0,0,0,0) inset));
 
 	&:after{
 		position: absolute;
@@ -172,6 +227,7 @@ body{
 		top: 0;
 		left: 0;
 		right: 0;
+		display: none;
 		bottom: 0;
 		margin: auto;
 		width: 80%;
@@ -193,8 +249,8 @@ body{
 	.point{
 		width: ($clock / 10);
 		height: ($clock / 10);
-		background: $dark_red;
-		z-index: 2;
+		background: $yellow;
+		z-index: 3;
 		@include border-radius(50%);
 		@include transform(scale(.4));
 		@include box-shadow(2px 2px 6px $black);
@@ -209,6 +265,7 @@ body{
 		@include transform(translate3D(0, -50%, 0));
 		@include transform-origin(bottom center);
 		@include border-radius(50% 50% 0 0);
+		@include box-shadow(0 0 1px $yellow);
 	}
 
 	.hours{
@@ -219,17 +276,19 @@ body{
 		@include transform(translate3D(0, -50%, 0));
 		@include transform-origin(bottom center);
 		@include border-radius(50% 50% 0 0);
+		@include box-shadow(0 0 1px $yellow);
 	}
 
 	.seconds{
 		height: ($clock / 3 );
 		width: 2px;
-		background: $dark_red;
+		background: $yellow;
 		z-index: 2;
 		@include transform(translate3D(0, -50%, 0));
 		@include transform-origin(bottom center);
 		@include border-radius(50% 50% 0 0);
 		@include transition((color 1s ease));
+		@include box-shadow(0 0 1px $black);
 	}
 
 	.point,
@@ -264,20 +323,22 @@ body{
 			height: 35px;
 			font-size: $clock / 10 + 4;
 			font-weight: bold;
-			color: $black;
+			color: $white;
 			z-index: 1;
-			background: $white;
+			background: transparent;
 			font-family: 'Architects Daughter', cursive;
+			@include text-shadow(0 0 1px $black);
+			@include transition(all 1s ease);
 
 			&._12{
 				bottom: inherit;
-				top: 5px;
+				top: 10px;
 				left: -3px;
 			}
 
 			&._6{
 				top: initial;
-				bottom: 15px;
+				bottom: 20px;
 				left: -3px;
 			}
 
@@ -313,7 +374,7 @@ body{
 			@include transition(all .5s ease);
 
 			&:hover{
-				background: $dark_red;
+				background: $yellow;
 				@include box-shadow(0 0 5px #111);
 
 				.submenu{
@@ -354,7 +415,7 @@ body{
 						&:not(.header){
 							&.active,
 							&:hover{
-								background: $dark_red;
+								background: $yellow;
 								color: white;
 								text-shadow: 0 0 2px $black;
 							}
@@ -378,7 +439,7 @@ body{
 
 	&.small{
 		$clock: 200px;
-		border: solid ($clock / 30 + 5) $dark_red ;
+		border: solid 0 $dark_red ;
 		max-width: $clock;
 		width: $clock;
 		min-height: $clock;
@@ -434,7 +495,7 @@ body{
 
 	&.big{
 		$clock: 400px;
-		border: solid ($clock / 30 + 5) $dark_red ;
+		border: solid 0 $dark_red ;
 		max-width: $clock;
 		width: $clock;
 		min-height: $clock;
@@ -492,7 +553,6 @@ body{
 .current_date{
 	position:  absolute;
 	top:  15px;
-	background: $white;
 	padding: .51rem 0;
 	margin: auto;
 	left: 0px;
@@ -505,14 +565,16 @@ body{
 	min-height: 60px;
 	@include border-radius(5px);
 
-	span{
-		font-weight: normal;
-		color: $dark_red;
-		@include transition(color 1s ease);
-	}
-
 	h1,span{
 		font-size: 13px;
+		color: black;
+		font-weight: bold;
+	}
+
+	span{
+		font-weight: normal;
+		color: $yellow;
+		@include transition(color 1s ease);
 	}
 }
 

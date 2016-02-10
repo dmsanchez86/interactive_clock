@@ -11,46 +11,118 @@ html {
   display: block; }
 
 body {
-  background-image: -webkit-radial-gradient(#aaa, #ddd);
-  background-image: -khtml-radial-gradient(#aaa, #ddd);
-  background-image: -moz-radial-gradient(#aaa, #ddd);
-  background-image: -ms-radial-gradient(#aaa, #ddd);
-  background-image: -o-radial-gradient(#aaa, #ddd);
-  background-image: radial-gradient(#aaa, #ddd);
+  background-image: -webkit-radial-gradient(#fff, #ccc);
+  background-image: -khtml-radial-gradient(#fff, #ccc);
+  background-image: -moz-radial-gradient(#fff, #ccc);
+  background-image: -ms-radial-gradient(#fff, #ccc);
+  background-image: -o-radial-gradient(#fff, #ccc);
+  background-image: radial-gradient(#fff, #ccc);
   position: relative; }
-  body.theme2 .clock {
-    border-color: #1e88e5; }
-    body.theme2 .clock .point,
-    body.theme2 .clock .seconds {
-      background: #1e88e5; }
-    body.theme2 .clock .config .item:hover {
-      background: #1e88e5; }
-    body.theme2 .clock .config .item .submenu ul li.active, body.theme2 .clock .config .item .submenu ul li:hover {
-      background: #1e88e5; }
-  body.theme2 .current_date span {
-    color: #1e88e5; }
-  body.theme3 .clock {
-    border-color: #7cb342; }
-    body.theme3 .clock .point,
-    body.theme3 .clock .seconds {
-      background: #7cb342; }
-    body.theme3 .clock .config .item:hover {
-      background: #7cb342; }
-    body.theme3 .clock .config .item .submenu ul li.active, body.theme3 .clock .config .item .submenu ul li:hover {
-      background: #7cb342; }
-  body.theme3 .current_date span {
-    color: #7cb342; }
-  body.theme4 .clock {
-    border-color: #ff8f00; }
-    body.theme4 .clock .point,
-    body.theme4 .clock .seconds {
-      background: #ff8f00; }
-    body.theme4 .clock .config .item:hover {
-      background: #ff8f00; }
-    body.theme4 .clock .config .item .submenu ul li.active, body.theme4 .clock .config .item .submenu ul li:hover {
-      background: #ff8f00; }
-  body.theme4 .current_date span {
-    color: #ff8f00; }
+  body.theme2 {
+    background-image: -webkit-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -khtml-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -moz-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -ms-radial-gradient(#e3f2fd, #90caf9);
+    background-image: -o-radial-gradient(#e3f2fd, #90caf9);
+    background-image: radial-gradient(#e3f2fd, #90caf9); }
+    body.theme2 .clock {
+      border-color: #1e88e5;
+      background-image: url(../img/js_clock.png);
+      background-position: 0; }
+      body.theme2 .clock:after {
+        display: block; }
+      body.theme2 .clock .point,
+      body.theme2 .clock .seconds {
+        background: #1e88e5; }
+      body.theme2 .clock .hours,
+      body.theme2 .clock .minutes {
+        -webkit-box-shadow: 0 0 1px #1e88e5;
+        -khtml-box-shadow: 0 0 1px #1e88e5;
+        -moz-box-shadow: 0 0 1px #1e88e5;
+        -ms-box-shadow: 0 0 1px #1e88e5;
+        -o-box-shadow: 0 0 1px #1e88e5;
+        box-shadow: 0 0 1px #1e88e5; }
+      body.theme2 .clock .numbers .number {
+        color: #111;
+        background: white;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+      body.theme2 .clock .config .item:hover {
+        background: #1e88e5; }
+      body.theme2 .clock .config .item .submenu ul li.active, body.theme2 .clock .config .item .submenu ul li:hover {
+        background: #1e88e5; }
+    body.theme2 .current_date span {
+      color: #1e88e5; }
+  body.theme3 {
+    background-image: -webkit-radial-gradient(#c8e6c9, #43a047);
+    background-image: -khtml-radial-gradient(#c8e6c9, #43a047);
+    background-image: -moz-radial-gradient(#c8e6c9, #43a047);
+    background-image: -ms-radial-gradient(#c8e6c9, #43a047);
+    background-image: -o-radial-gradient(#c8e6c9, #43a047);
+    background-image: radial-gradient(#c8e6c9, #43a047); }
+    body.theme3 .clock {
+      border: solid 10px #7cb342;
+      background: white;
+      -webkit-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -khtml-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -moz-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -ms-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      -o-box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset;
+      box-shadow: 0 0 15px 1px black, 0 0 4px 1px black inset; }
+      body.theme3 .clock:after {
+        display: block; }
+      body.theme3 .clock .point,
+      body.theme3 .clock .seconds {
+        background: #7cb342; }
+      body.theme3 .clock .numbers .number {
+        color: #111;
+        background: white;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+      body.theme3 .clock .config .item:hover {
+        background: #7cb342; }
+      body.theme3 .clock .config .item .submenu ul li.active, body.theme3 .clock .config .item .submenu ul li:hover {
+        background: #7cb342; }
+    body.theme3 .current_date span {
+      color: #7cb342; }
+  body.theme4 {
+    background-image: -webkit-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -khtml-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -moz-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -ms-radial-gradient(#ffecb3, #ffd54f);
+    background-image: -o-radial-gradient(#ffecb3, #ffd54f);
+    background-image: radial-gradient(#ffecb3, #ffd54f); }
+    body.theme4 .clock {
+      border: solid 10px #ff8f00;
+      background-image: url(../img/html.png);
+      background-position: 0;
+      background-color: white; }
+      body.theme4 .clock .point,
+      body.theme4 .clock .seconds {
+        background: #ff8f00; }
+      body.theme4 .clock .numbers .number {
+        color: #111;
+        background: transparent;
+        -webkit-text-shadow: 0 0 1px #ccc;
+        -khtml-text-shadow: 0 0 1px #ccc;
+        -moz-text-shadow: 0 0 1px #ccc;
+        -ms-text-shadow: 0 0 1px #ccc;
+        -o-text-shadow: 0 0 1px #ccc;
+        text-shadow: 0 0 1px #ccc; }
+      body.theme4 .clock .config .item:hover {
+        background: #ff8f00; }
+      body.theme4 .clock .config .item .submenu ul li.active, body.theme4 .clock .config .item .submenu ul li:hover {
+        background: #ff8f00; }
+    body.theme4 .current_date span {
+      color: #ff8f00; }
 
 .main {
   overflow: hidden;
@@ -74,17 +146,14 @@ body {
   justify-content: center; }
 
 .clock {
-  border: solid 15px #c62828;
+  border: solid 0 #c62828;
   max-width: 300px;
   width: 300px;
   min-height: 300px;
   position: relative;
-  background-image: -webkit-radial-gradient(#fff, #fff);
-  background-image: -khtml-radial-gradient(#fff, #fff);
-  background-image: -moz-radial-gradient(#fff, #fff);
-  background-image: -ms-radial-gradient(#fff, #fff);
-  background-image: -o-radial-gradient(#fff, #fff);
-  background-image: radial-gradient(#fff, #fff);
+  background-image: url(../img/clock_radioactive.png);
+  background-position: 0 -1px;
+  background-size: 100%;
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -103,12 +172,12 @@ body {
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-  -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -khtml-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -moz-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -ms-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  -o-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset; }
+  -webkit-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -khtml-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -moz-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -ms-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  -o-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
+  box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset; }
   .clock:after {
     position: absolute;
     -webkit-border-radius: 50%;
@@ -118,10 +187,11 @@ body {
     -o-border-radius: 50%;
     border-radius: 50%;
     content: '';
-    border: dotted 2px #323232;
+    border: dotted 2px #111;
     top: 0;
     left: 0;
     right: 0;
+    display: none;
     bottom: 0;
     margin: auto;
     width: 80%;
@@ -149,8 +219,8 @@ body {
   .clock .point {
     width: 30px;
     height: 30px;
-    background: #c62828;
-    z-index: 2;
+    background: #FF0;
+    z-index: 3;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -163,12 +233,12 @@ body {
     -ms-transform: scale(0.4);
     -o-transform: scale(0.4);
     transform: scale(0.4);
-    -webkit-box-shadow: 2px 2px 6px #323232;
-    -khtml-box-shadow: 2px 2px 6px #323232;
-    -moz-box-shadow: 2px 2px 6px #323232;
-    -ms-box-shadow: 2px 2px 6px #323232;
-    -o-box-shadow: 2px 2px 6px #323232;
-    box-shadow: 2px 2px 6px #323232;
+    -webkit-box-shadow: 2px 2px 6px #111;
+    -khtml-box-shadow: 2px 2px 6px #111;
+    -moz-box-shadow: 2px 2px 6px #111;
+    -ms-box-shadow: 2px 2px 6px #111;
+    -o-box-shadow: 2px 2px 6px #111;
+    box-shadow: 2px 2px 6px #111;
     -webkit-transition: all 1s ease;
     -khtml-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -178,7 +248,7 @@ body {
   .clock .minutes {
     height: 90px;
     width: 4px;
-    background: #323232;
+    background: #111;
     z-index: 1;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -197,11 +267,17 @@ body {
     -moz-border-radius: 50% 50% 0 0;
     -ms-border-radius: 50% 50% 0 0;
     -o-border-radius: 50% 50% 0 0;
-    border-radius: 50% 50% 0 0; }
+    border-radius: 50% 50% 0 0;
+    -webkit-box-shadow: 0 0 1px #FF0;
+    -khtml-box-shadow: 0 0 1px #FF0;
+    -moz-box-shadow: 0 0 1px #FF0;
+    -ms-box-shadow: 0 0 1px #FF0;
+    -o-box-shadow: 0 0 1px #FF0;
+    box-shadow: 0 0 1px #FF0; }
   .clock .hours {
     height: 60px;
     width: 4px;
-    background: #323232;
+    background: #111;
     z-index: 1;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -220,11 +296,17 @@ body {
     -moz-border-radius: 50% 50% 0 0;
     -ms-border-radius: 50% 50% 0 0;
     -o-border-radius: 50% 50% 0 0;
-    border-radius: 50% 50% 0 0; }
+    border-radius: 50% 50% 0 0;
+    -webkit-box-shadow: 0 0 1px #FF0;
+    -khtml-box-shadow: 0 0 1px #FF0;
+    -moz-box-shadow: 0 0 1px #FF0;
+    -ms-box-shadow: 0 0 1px #FF0;
+    -o-box-shadow: 0 0 1px #FF0;
+    box-shadow: 0 0 1px #FF0; }
   .clock .seconds {
     height: 100px;
     width: 2px;
-    background: #c62828;
+    background: #FF0;
     z-index: 2;
     -webkit-transform: translate3D(0, -50%, 0);
     -khtml-transform: translate3D(0, -50%, 0);
@@ -249,7 +331,13 @@ body {
     -moz-transition: color 1s ease;
     -ms-transition: color 1s ease;
     -o-transition: color 1s ease;
-    transition: color 1s ease; }
+    transition: color 1s ease;
+    -webkit-box-shadow: 0 0 1px #111;
+    -khtml-box-shadow: 0 0 1px #111;
+    -moz-box-shadow: 0 0 1px #111;
+    -ms-box-shadow: 0 0 1px #111;
+    -o-box-shadow: 0 0 1px #111;
+    box-shadow: 0 0 1px #111; }
   .clock .point,
   .clock .hours,
   .clock .minutes,
@@ -279,17 +367,29 @@ body {
       height: 35px;
       font-size: 34px;
       font-weight: bold;
-      color: #323232;
+      color: #fff;
       z-index: 1;
-      background: #fff;
-      font-family: 'Architects Daughter', cursive; }
+      background: transparent;
+      font-family: 'Architects Daughter', cursive;
+      -webkit-text-shadow: 0 0 1px #111;
+      -khtml-text-shadow: 0 0 1px #111;
+      -moz-text-shadow: 0 0 1px #111;
+      -ms-text-shadow: 0 0 1px #111;
+      -o-text-shadow: 0 0 1px #111;
+      text-shadow: 0 0 1px #111;
+      -webkit-transition: all 1s ease;
+      -khtml-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease; }
       .clock .numbers .number._12 {
         bottom: inherit;
-        top: 5px;
+        top: 10px;
         left: -3px; }
       .clock .numbers .number._6 {
         top: initial;
-        bottom: 15px;
+        bottom: 20px;
         left: -3px; }
       .clock .numbers .number._3 {
         left: initial;
@@ -325,7 +425,7 @@ body {
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease; }
       .clock .config .item:hover {
-        background: #c62828;
+        background: #FF0;
         -webkit-box-shadow: 0 0 5px #111;
         -khtml-box-shadow: 0 0 5px #111;
         -moz-box-shadow: 0 0 5px #111;
@@ -383,9 +483,9 @@ body {
             -o-transition: all 1s ease;
             transition: all 1s ease; }
             .clock .config .item .submenu ul li:not(.header).active, .clock .config .item .submenu ul li:not(.header):hover {
-              background: #c62828;
+              background: #FF0;
               color: white;
-              text-shadow: 0 0 2px #323232; }
+              text-shadow: 0 0 2px #111; }
             .clock .config .item .submenu ul li.header {
               text-decoration: underline;
               font-weight: bold;
@@ -393,7 +493,7 @@ body {
               .clock .config .item .submenu ul li.header:hover {
                 background: transparent; }
   .clock.small {
-    border: solid 11.66667px #c62828;
+    border: solid 0 #c62828;
     max-width: 200px;
     width: 200px;
     min-height: 200px; }
@@ -425,7 +525,7 @@ body {
         padding-bottom: 5px;
         left: 6px; }
   .clock.big {
-    border: solid 18.33333px #c62828;
+    border: solid 0 #c62828;
     max-width: 400px;
     width: 400px;
     min-height: 400px; }
@@ -460,7 +560,6 @@ body {
 .current_date {
   position: absolute;
   top: 15px;
-  background: #fff;
   padding: .51rem 0;
   margin: auto;
   left: 0px;
@@ -477,17 +576,19 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
+  .current_date h1, .current_date span {
+    font-size: 13px;
+    color: black;
+    font-weight: bold; }
   .current_date span {
     font-weight: normal;
-    color: #c62828;
+    color: #FF0;
     -webkit-transition: color 1s ease;
     -khtml-transition: color 1s ease;
     -moz-transition: color 1s ease;
     -ms-transition: color 1s ease;
     -o-transition: color 1s ease;
     transition: color 1s ease; }
-  .current_date h1, .current_date span {
-    font-size: 13px; }
 
 @media (max-width: 500px) {
   .clock .config {
