@@ -285,6 +285,7 @@
 
       span{
         color: $dark_blue;
+        @include text-shadow(none);
       }
 
       .face{
@@ -393,6 +394,7 @@
 
       span{
         color: $dark_green;
+        @include text-shadow(none);
       }
 
       .face{
@@ -478,6 +480,7 @@
 
       span{
         color: $dark_orange;
+        @include text-shadow(none);
       }
 
       .face{

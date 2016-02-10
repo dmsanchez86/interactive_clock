@@ -181,7 +181,9 @@ $().ready(function(){
 		$('.config ul.theme li:not(.header)').removeClass('active');
 		$(this).addClass('active');
 
-		var theme = "theme"+$(this).attr('theme');
+		var theme = "theme"+$(this).attr('theme'); 
+
+		change_favicon(theme);
 
 		$('body').removeClass('theme1 theme2 theme3 theme4');
 		$('body').addClass(theme);
@@ -208,6 +210,13 @@ $().ready(function(){
 
 		translate_app(language);
 	});
+
+	function change_favicon(theme){
+		if(theme != "theme1")
+			$('#favicon').attr('href', 'img/favicon_'+theme+'.png');
+		else
+			$('#favicon').attr('href', 'img/favicon.png');
+	}
 
 	function translate_app(lan){
 		if(lan == "spanish"){

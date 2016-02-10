@@ -90,7 +90,13 @@ body {
       body.theme2 .clock .config .item .submenu ul li.active, body.theme2 .clock .config .item .submenu ul li:hover {
         background: #1e88e5; }
     body.theme2 .current_date span {
-      color: #1e88e5; }
+      color: #1e88e5;
+      -webkit-text-shadow: none;
+      -khtml-text-shadow: none;
+      -moz-text-shadow: none;
+      -ms-text-shadow: none;
+      -o-text-shadow: none;
+      text-shadow: none; }
     body.theme2 .current_date .face {
       background: #1e88e5; }
   body.theme3 {
@@ -148,7 +154,13 @@ body {
         body.theme3 .clock.big .numbers .number._12 {
           top: 16px; }
     body.theme3 .current_date span {
-      color: #7cb342; }
+      color: #7cb342;
+      -webkit-text-shadow: none;
+      -khtml-text-shadow: none;
+      -moz-text-shadow: none;
+      -ms-text-shadow: none;
+      -o-text-shadow: none;
+      text-shadow: none; }
     body.theme3 .current_date .face {
       background: #7cb342; }
   body.theme4 {
@@ -211,7 +223,13 @@ body {
       body.theme4 .clock .config .item .submenu ul li.active, body.theme4 .clock .config .item .submenu ul li:hover {
         background: #ff8f00; }
     body.theme4 .current_date span {
-      color: #ff8f00; }
+      color: #ff8f00;
+      -webkit-text-shadow: none;
+      -khtml-text-shadow: none;
+      -moz-text-shadow: none;
+      -ms-text-shadow: none;
+      -o-text-shadow: none;
+      text-shadow: none; }
     body.theme4 .current_date .face {
       background: #ff8f00; }
 
