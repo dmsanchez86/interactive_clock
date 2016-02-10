@@ -292,6 +292,17 @@
         background: $dark_blue;
       }
     }
+
+    .loader{
+      @include gradient(radial, (#e3f2fd , #90caf9));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#e3f2fd , #90caf9));
+        }
+      }
+    }
   }
   &.theme3{
     @include gradient(radial, (#c8e6c9 , #43a047));
@@ -401,6 +412,17 @@
         background: $dark_green;
       }
     }
+
+    .loader{
+      @include gradient(radial, (#c8e6c9 , #43a047));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#c8e6c9 , #43a047));
+        }
+      }
+    }
   }
   &.theme4{
     @include gradient(radial, (#ffecb3 , #ffd54f ));
@@ -485,6 +507,17 @@
 
       .face{
         background: $dark_orange;
+      }
+    }
+
+    .loader{
+      @include gradient(radial, (#ffecb3 , #ffd54f ));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#ffecb3 , #ffd54f ));
+        }
       }
     }
   }

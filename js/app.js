@@ -91,6 +91,8 @@ var App = {
 
 $().ready(function(){
 
+	loader();
+
 	var $current_date = $('.current_date');
 
 	// settings prev configure
@@ -312,5 +314,25 @@ $().ready(function(){
 				$elem.text(App.language[App.current_language].words.menu_config.language[i]);
 			});		
 		}
+	}
+
+	function loader(){
+		var progress = 0, progress_size = 100;
+
+		var interval = setInterval(function(){
+			progress++;
+			progress_size++;
+			$('.loader .porcentage span').text(progress+'%');
+			
+
+			if(progress == 100){
+				clearInterval(interval);
+				$('.loader').addClass('loaded');
+
+				setTimeout(function(){
+					$('.loader').fadeOut('500');
+				},700);
+			}
+		}, 10);
 	}
 });

@@ -488,5 +488,55 @@ body{
 	}
 }
 
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,1);
+	width: 100vw;
+	height: 100vh;
+	z-index: 50;
+	@include transition(transform .15s ease);
+	@include gradient(radial, (#fff, #ccc));
+
+	&.loaded{
+
+		.porcentage{
+			@include box-shadow(none);
+			@include gradient(radial, (#fff, #ccc));
+			@include animation((loaded .81s 1 ease));
+
+			span{
+				display: none;
+			}
+		}
+	}
+
+	&.fade{
+		@include transform(scale(0));
+		@include border-radius(50%);
+	}
+
+	.porcentage{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		color: #111;
+		font-size: 40px;
+		line-height: 2.5;
+		font-family: 'Architects Daughter', cursive;
+		@include box-shadow(0 0 5px rgba(0,0,0,.6));
+		@include text-shadow(0 0 2px rgba(255,255,255,.6));
+		@include border-radius(50%);	
+		//@include animation(loading 3s infinite ease);
+	}
+}
+
 @import 'queries';
 @import 'keyframes';

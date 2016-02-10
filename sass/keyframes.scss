@@ -18,3 +18,51 @@
 	0%, 100%{ @include transform(scale(1) rotate(0));}
 	50%{ @include transform(scale(.7)  rotate(360deg));}
 }
+
+@-webkit-keyframes loading{
+	0%, 100%{ 
+		@include transform(translate3d(0,268px,0) );
+		@include box-shadow(0 0 10px rgba(0,0,0,.6));
+	}
+	50%{ 
+		@include transform(translate3d(0,0px,0));
+	}
+}
+
+@keyframes loading{
+	0%, 100%{ 
+		@include transform(translate3d(0,268px,0) );
+		@include box-shadow(0 0 10px rgba(0,0,0,.6));
+	}
+	50%{ 
+		@include transform(translate3d(0,0px,0));
+	}
+}
+
+@-webkit-keyframes loaded{
+	0%{ 
+		width: 100px;
+		height: 100px;
+	}
+	98%,99%{
+		@include border-radius(0);
+	}
+	100%{ 
+		width: 150vw;
+		height: 150vh;
+	}
+}
+
+@keyframes loaded{
+	0%{ 
+		width: 100px;
+		height: 100px;
+	}
+	98%,99%{
+		@include border-radius(0);
+	}
+	100%{ 
+		width: 150vw;
+		height: 150vh;
+	}
+}
