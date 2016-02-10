@@ -18,6 +18,39 @@ body {
   background-image: -o-radial-gradient(#aaa, #ddd);
   background-image: radial-gradient(#aaa, #ddd);
   position: relative; }
+  body.theme2 .clock {
+    border-color: #1e88e5; }
+    body.theme2 .clock .point,
+    body.theme2 .clock .seconds {
+      background: #1e88e5; }
+    body.theme2 .clock .config:hover {
+      background: #1e88e5; }
+    body.theme2 .clock .config .submenu ul li.active, body.theme2 .clock .config .submenu ul li:hover {
+      background: #1e88e5; }
+  body.theme2 .current_date span {
+    color: #1e88e5; }
+  body.theme3 .clock {
+    border-color: #7cb342; }
+    body.theme3 .clock .point,
+    body.theme3 .clock .seconds {
+      background: #7cb342; }
+    body.theme3 .clock .config:hover {
+      background: #7cb342; }
+    body.theme3 .clock .config .submenu ul li.active, body.theme3 .clock .config .submenu ul li:hover {
+      background: #7cb342; }
+  body.theme3 .current_date span {
+    color: #7cb342; }
+  body.theme4 .clock {
+    border-color: #ff8f00; }
+    body.theme4 .clock .point,
+    body.theme4 .clock .seconds {
+      background: #ff8f00; }
+    body.theme4 .clock .config:hover {
+      background: #ff8f00; }
+    body.theme4 .clock .config .submenu ul li.active, body.theme4 .clock .config .submenu ul li:hover {
+      background: #ff8f00; }
+  body.theme4 .current_date span {
+    color: #ff8f00; }
 
 .main {
   overflow: hidden;
@@ -46,12 +79,12 @@ body {
   width: 300px;
   min-height: 300px;
   position: relative;
-  background-image: -webkit-radial-gradient(#fff, #FFF);
-  background-image: -khtml-radial-gradient(#fff, #FFF);
-  background-image: -moz-radial-gradient(#fff, #FFF);
-  background-image: -ms-radial-gradient(#fff, #FFF);
-  background-image: -o-radial-gradient(#fff, #FFF);
-  background-image: radial-gradient(#fff, #FFF);
+  background-image: -webkit-radial-gradient(#fff, #fff);
+  background-image: -khtml-radial-gradient(#fff, #fff);
+  background-image: -moz-radial-gradient(#fff, #fff);
+  background-image: -ms-radial-gradient(#fff, #fff);
+  background-image: -o-radial-gradient(#fff, #fff);
+  background-image: radial-gradient(#fff, #fff);
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -64,6 +97,12 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  -webkit-transition: all 1s ease;
+  -khtml-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
   -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
   -khtml-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
   -moz-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.7), 0 0 4px 1px rgba(0, 0, 0, 0.7) inset;
@@ -79,7 +118,7 @@ body {
     -o-border-radius: 50%;
     border-radius: 50%;
     content: '';
-    border: dotted 2px #111;
+    border: dotted 2px #323232;
     top: 0;
     left: 0;
     right: 0;
@@ -105,12 +144,18 @@ body {
     -ms-transform: scale(0.4);
     -o-transform: scale(0.4);
     transform: scale(0.4);
-    -webkit-box-shadow: 2px 2px 6px #111;
-    -khtml-box-shadow: 2px 2px 6px #111;
-    -moz-box-shadow: 2px 2px 6px #111;
-    -ms-box-shadow: 2px 2px 6px #111;
-    -o-box-shadow: 2px 2px 6px #111;
-    box-shadow: 2px 2px 6px #111; }
+    -webkit-box-shadow: 2px 2px 6px #323232;
+    -khtml-box-shadow: 2px 2px 6px #323232;
+    -moz-box-shadow: 2px 2px 6px #323232;
+    -ms-box-shadow: 2px 2px 6px #323232;
+    -o-box-shadow: 2px 2px 6px #323232;
+    box-shadow: 2px 2px 6px #323232;
+    -webkit-transition: all 1s ease;
+    -khtml-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
   .clock .minutes {
     height: 90px;
     width: 4px;
@@ -159,7 +204,7 @@ body {
     border-radius: 50% 50% 0 0; }
   .clock .seconds {
     height: 100px;
-    width: 1px;
+    width: 2px;
     background: #c62828;
     z-index: 2;
     -webkit-transform: translate3D(0, -50%, 0);
@@ -179,7 +224,13 @@ body {
     -moz-border-radius: 50% 50% 0 0;
     -ms-border-radius: 50% 50% 0 0;
     -o-border-radius: 50% 50% 0 0;
-    border-radius: 50% 50% 0 0; }
+    border-radius: 50% 50% 0 0;
+    -webkit-transition: color 1s ease;
+    -khtml-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease; }
   .clock .point,
   .clock .hours,
   .clock .minutes,
@@ -211,7 +262,7 @@ body {
       font-weight: bold;
       color: #323232;
       z-index: 1;
-      background: white;
+      background: #fff;
       font-family: 'Architects Daughter', cursive; }
       .clock .numbers .number._12 {
         bottom: inherit;
@@ -231,11 +282,93 @@ body {
         top: 0px;
         padding-bottom: 10px;
         left: 10px; }
+  .clock .config {
+    position: absolute;
+    max-width: 50px;
+    top: -30px;
+    left: -100px;
+    cursor: pointer;
+    background: #fff;
+    z-index: 5;
+    padding: .7rem .7rem .5rem;
+    -webkit-transition: all 0.5s ease;
+    -khtml-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+    .clock .config:hover {
+      background: #c62828;
+      -webkit-box-shadow: 0 0 5px #111;
+      -khtml-box-shadow: 0 0 5px #111;
+      -moz-box-shadow: 0 0 5px #111;
+      -ms-box-shadow: 0 0 5px #111;
+      -o-box-shadow: 0 0 5px #111;
+      box-shadow: 0 0 5px #111; }
+      .clock .config:hover .submenu {
+        width: 80px;
+        height: 115px; }
+      .clock .config:hover img {
+        -webkit-animation: rotate 5s infinite linear;
+        -khtml-animation: rotate 5s infinite linear;
+        -moz-animation: rotate 5s infinite linear;
+        -ms-animation: rotate 5s infinite linear;
+        -o-animation: rotate 5s infinite linear;
+        animation: rotate 5s infinite linear; }
+    .clock .config img {
+      max-width: 100%; }
+    .clock .config .submenu {
+      position: absolute;
+      left: 60%;
+      background: #fff;
+      top: 60%;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-transition: width 0.25s ease, height 0.15s 0.2s ease;
+      -khtml-transition: width 0.25s ease, height 0.15s 0.2s ease;
+      -moz-transition: width 0.25s ease, height 0.15s 0.2s ease;
+      -ms-transition: width 0.25s ease, height 0.15s 0.2s ease;
+      -o-transition: width 0.25s ease, height 0.15s 0.2s ease;
+      transition: width 0.25s ease, height 0.15s 0.2s ease;
+      -webkit-box-shadow: 0 0 5px #111;
+      -khtml-box-shadow: 0 0 5px #111;
+      -moz-box-shadow: 0 0 5px #111;
+      -ms-box-shadow: 0 0 5px #111;
+      -o-box-shadow: 0 0 5px #111;
+      box-shadow: 0 0 5px #111; }
+      .clock .config .submenu ul {
+        list-style: none; }
+        .clock .config .submenu ul li {
+          padding: .25rem;
+          text-align: center;
+          -webkit-transition: all 1s ease;
+          -khtml-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          transition: all 1s ease; }
+          .clock .config .submenu ul li.active, .clock .config .submenu ul li:hover {
+            background: #c62828;
+            color: white;
+            text-shadow: 0 0 2px #323232; }
 
 .current_date {
   position: absolute;
   top: 15px;
-  background: #fefefe;
+  background: #fff;
   padding: .51rem 0;
   margin: auto;
   left: 0px;
@@ -254,8 +387,45 @@ body {
   border-radius: 5px; }
   .current_date span {
     font-weight: normal;
-    color: #c62828; }
+    color: #c62828;
+    -webkit-transition: color 1s ease;
+    -khtml-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease; }
   .current_date h1, .current_date span {
     font-size: 13px; }
+
+@keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
+@-webkit-keyframes rotate {
+  0%, 100% {
+    -webkit-transform: scale(1) rotate(0);
+    -khtml-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0); }
+  50% {
+    -webkit-transform: scale(0.7) rotate(360deg);
+    -khtml-transform: scale(0.7) rotate(360deg);
+    -moz-transform: scale(0.7) rotate(360deg);
+    -ms-transform: scale(0.7) rotate(360deg);
+    -o-transform: scale(0.7) rotate(360deg);
+    transform: scale(0.7) rotate(360deg); } }
 
 /*# sourceMappingURL=main.css.map */
