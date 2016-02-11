@@ -14,13 +14,13 @@ html {
   display: block; }
 
 body {
+  position: relative;
   background-image: -webkit-radial-gradient(#fff, #ccc);
   background-image: -khtml-radial-gradient(#fff, #ccc);
   background-image: -moz-radial-gradient(#fff, #ccc);
   background-image: -ms-radial-gradient(#fff, #ccc);
   background-image: -o-radial-gradient(#fff, #ccc);
-  background-image: radial-gradient(#fff, #ccc);
-  position: relative; }
+  background-image: radial-gradient(#fff, #ccc); }
   body.theme2 {
     background-image: -webkit-radial-gradient(#e3f2fd, #90caf9);
     background-image: -khtml-radial-gradient(#e3f2fd, #90caf9);
@@ -336,12 +336,12 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  -webkit-transition: all 1s ease;
-  -khtml-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: border 1s ease;
+  -khtml-transition: border 1s ease;
+  -moz-transition: border 1s ease;
+  -ms-transition: border 1s ease;
+  -o-transition: border 1s ease;
+  transition: border 1s ease;
   -webkit-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
   -khtml-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
   -moz-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
@@ -349,30 +349,30 @@ body {
   -o-box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset;
   box-shadow: 0 0 15px 1px transparent, 0 0 4px 1px transparent inset; }
   .clock:after {
+    content: '';
+    border: dotted 2px #111;
+    display: none;
+    width: 80%;
+    z-index: 0;
+    height: 80%;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border-radius: 50%;
-    content: '';
-    border: dotted 2px #111;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    bottom: 0;
-    margin: auto;
-    width: 80%;
-    z-index: 0;
-    height: 80%;
-    -webkit-transition: all 1s ease;
-    -khtml-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease; }
+    -webkit-transition: all 0.5s ease;
+    -khtml-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
   .clock:before {
     position: absolute;
     top: 110%;
@@ -443,13 +443,7 @@ body {
     -moz-box-shadow: 0 0 1px #FF0;
     -ms-box-shadow: 0 0 1px #FF0;
     -o-box-shadow: 0 0 1px #FF0;
-    box-shadow: 0 0 1px #FF0;
-    -webkit-transition: all 1s ease;
-    -khtml-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease; }
+    box-shadow: 0 0 1px #FF0; }
   .clock .hours {
     height: 60px;
     width: 4px;
@@ -534,12 +528,6 @@ body {
     width: 100%;
     height: 100%; }
     .clock .numbers .number {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
       display: inline;
       text-align: center;
       width: 35px;
@@ -550,18 +538,24 @@ body {
       z-index: 1;
       background: transparent;
       font-family: 'Architects Daughter', cursive;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       -webkit-text-shadow: 0 0 1px #111;
       -khtml-text-shadow: 0 0 1px #111;
       -moz-text-shadow: 0 0 1px #111;
       -ms-text-shadow: 0 0 1px #111;
       -o-text-shadow: 0 0 1px #111;
       text-shadow: 0 0 1px #111;
-      -webkit-transition: all 1s ease;
-      -khtml-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      transition: all 1s ease; }
+      -webkit-transition: all 0.5s ease;
+      -khtml-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
       .clock .numbers .number._12 {
         bottom: inherit;
         top: 10px;
@@ -775,10 +769,12 @@ body {
   -ms-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
   -o-transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95);
   transition: all 0.9s cubic-bezier(0.44, 1.41, 0.82, 0.95); }
-  .current_date:hover .face._1, .current_date:hover .face._3 {
-    width: 100%; }
-  .current_date:hover .face._2, .current_date:hover .face._4 {
-    height: 100%; }
+  .current_date:hover {
+    background: rgba(255, 255, 255, 0.7); }
+    .current_date:hover .face._1, .current_date:hover .face._3 {
+      width: 100%; }
+    .current_date:hover .face._2, .current_date:hover .face._4 {
+      height: 100%; }
   .current_date h1, .current_date span {
     font-size: 14px;
     color: black;
@@ -882,19 +878,19 @@ body {
     -o-border-radius: 50%;
     border-radius: 50%; }
   .loader .porcentage {
-    position: absolute;
     width: 100px;
     height: 100px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     color: #111;
     font-size: 40px;
     line-height: 2.5;
     font-family: 'Architects Daughter', cursive;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     -khtml-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
@@ -916,11 +912,11 @@ body {
 
 .popup {
   position: fixed;
-  margin: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  margin: auto;
   max-width: 90%;
   width: 900px;
   height: calc(100vh - 100px);
@@ -1017,14 +1013,12 @@ body {
       -o-transform: scale(1);
       transform: scale(1); }
 
-@media (max-width: 500px) {
-  .clock .config {
-    left: -20px; }
-    .clock .config ul.size li:last-child {
-      display: none; }
-  .clock.small .config {
-    left: -60px; }
-
+@media (max-width: 800px) {
+  .popup ul {
+    padding-left: 0; }
+    .popup ul li {
+      font-size: 12px; } }
+@media (max-width: 680px) {
   .popup {
     height: calc(100vh - 100px);
     padding: 1rem; }
@@ -1036,6 +1030,14 @@ body {
       margin: .5rem 0;
       max-height: 300px;
       width: 100%; } }
+@media (max-width: 600px) {
+  .clock .config ul.size li:last-child {
+    display: none; } }
+@media (max-width: 500px) {
+  .clock .config {
+    left: -20px; }
+  .clock.small .config {
+    left: -60px; } }
 @keyframes rotate {
   0%, 100% {
     -webkit-transform: scale(1) rotate(0);

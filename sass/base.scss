@@ -2,23 +2,14 @@
 @import 'variables';
 @import 'functions';
 
-
-*{
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
+*{ @include reset; }
 
 body,
-html{
-	width: 100%;
-	height: 100%;
-	display: block;
-}
+html{ @include init; }
 
 body{
-	@include gradient(radial, (#fff, #ccc));
 	position: relative;
+	@include gradient(radial, (#fff, #ccc));
 	@include themes();
 }
 
@@ -44,24 +35,19 @@ body{
 	background-color: black;
 	@include box-sizing(border-box);
 	@include border-radius(50%);
-	@include transition(all 1s ease);
+	@include transition(border 1s ease);
 	@include box-shadow((0 0 15px 1px rgba(0,0,0,0), 0 0 4px 1px rgba(0,0,0,0) inset));
 
 	&:after{
-		position: absolute;
-		@include border-radius(50%);
 		content: '';
 		border: dotted 2px $black;
-		top: 0;
-		left: 0;
-		right: 0;
 		display: none;
-		bottom: 0;
-		margin: auto;
 		width: 80%;
 		z-index: 0;
 		height: 80%;
-		@include transition(all 1s ease);
+		@include center-absolute(absolute);
+		@include border-radius(50%);
+		@include transition(all .5s ease);
 	}
 
 	&:before{
@@ -94,7 +80,6 @@ body{
 		@include transform(translate3D(0, -50%, 0));
 		@include transform-origin(bottom center);
 		@include box-shadow(0 0 1px $yellow);
-		@include transition(all 1s ease);
 	}
 
 	.hours{
@@ -129,12 +114,7 @@ body{
 	.hours,
 	.minutes,
 	.seconds{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: auto;
+		@include center-absolute(absolute);
 	}
 
 	.numbers{
@@ -145,12 +125,6 @@ body{
 		height: 100%;
 
 		.number{
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-			margin: auto;
 			display: inline;
 			text-align: center;
 			width: 35px;
@@ -161,8 +135,9 @@ body{
 			z-index: 1;
 			background: transparent;
 			font-family: 'Architects Daughter', cursive;
+			@include center-absolute(absolute);
 			@include text-shadow(0 0 1px $black);
-			@include transition(all 1s ease);
+			@include transition(all .5s ease);
 
 			&._12{
 				bottom: inherit;
@@ -423,12 +398,7 @@ body{
 	@include transition(all .9s cubic-bezier(.44,1.41,.82,.95));
 
 	&:hover{
-		// @include box-shadow(0 0 2px white);
-	}
-
-	//&.active,
-	&:hover{
-		//background: transparent;
+		background: rgba(255,255,255,.7);
 
 		.face{
 			&._1,
@@ -518,33 +488,22 @@ body{
 	}
 
 	.porcentage{
-		position: absolute;
 		width: 100px;
 		height: 100px;
-		margin: auto;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
 		text-align: center;
 		color: #111;
 		font-size: 40px;
 		line-height: 2.5;
 		font-family: 'Architects Daughter', cursive;
+		@include center-absolute(absolute);
 		@include box-shadow(0 0 5px rgba(0,0,0,.6));
 		@include text-shadow(0 0 2px rgba(255,255,255,.6));
-		@include border-radius(50%);	
-		//@include animation(loading 3s infinite ease);
+		@include border-radius(50%);
 	}
 }
 
 .popup{
-	position: fixed;
-	margin: auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	@include center-absolute(fixed);
 	max-width: 90%;
 	width: 900px;
 	height: calc(100vh - 100px);
