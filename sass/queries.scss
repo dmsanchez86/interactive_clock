@@ -1,24 +1,17 @@
-@media (max-width: 500px){
-	.clock{
-		.config{
-			left: -20px;
+@media (max-width: 800px){
+	.popup{
 
-			ul.size{
-				li{
-					&:last-child{
-						display: none;
-					};
-				}
+		ul{
+			padding-left: 0;
+
+			li{
+				font-size: 12px;
 			}
 		}
 
-		&.small{
-			.config{
-				left: -60px;
-			}
-		}
 	}
-
+}
+@media (max-width: 680px){
 	.popup{
 		height: calc(100vh - 100px);
 		padding: 1rem;
@@ -35,5 +28,33 @@
 			width: 100%;
 		}
 
+	}
+}
+@media (max-width: 600px){
+	.clock{
+		.config{
+
+			ul.size{
+				li{
+					&:last-child{
+						display: none;
+					};
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.clock{
+		.config{
+			left: -20px;
+		}
+
+		&.small{
+			.config{
+				left: -60px;
+			}
+		}
 	}
 }

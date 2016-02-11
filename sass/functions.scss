@@ -15,7 +15,7 @@
             #{$property} : $value;
 }
 
-// Function to align items to center display flex
+// Function to align items to center --- display flex
 @mixin align-items($value) {
   -webkit-align-items: $value;
   -moz-align-items: $value;
@@ -24,7 +24,7 @@
   align-items: $value;
 }
 
-// Function to set border radius
+// Function to set animation
 @mixin animation($value) {
   @include prefixes(animation, $value);
 }
@@ -34,7 +34,7 @@
   @include prefixes(animation-direction, $value);
 }
 
-// Function to set direction animation
+// Function to set delay animation
 @mixin animation-delay($value){
   @include prefixes(animation-delay, $value);
 }
@@ -44,7 +44,7 @@
   @include prefixes(animation-play-state, $value);
 }
 
-// function to fill animation
+// function to fill animation mode
 @mixin animation-fill-mode($value){
   @include prefixes(animation-fill-mode, $value);
 }
@@ -54,7 +54,7 @@
   @include prefixes(border-radius, $radius);
 }
 
-// Funtion to set transition
+// Funtion to set box-shadow
 @mixin box-shadow($value) {
   @include prefixes(box-shadow , $value);
 }
@@ -85,6 +85,16 @@
     }
 }
 
+// function to center any tag absolute
+@mixin center-absolute($position){
+  position: $position;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 // Function to set element how flex
 @mixin flex($value){
   display: -webkit-#{$value};
@@ -94,7 +104,7 @@
   display: $value;
 }
 
-// Function to set element how flex
+// Function to set element how flex-item
 @mixin flex-item($value){
   -webkit-flex: $value;
   -moz-flex: $value;
@@ -129,6 +139,13 @@
   background-image:     -ms-#{$direction}-gradient($value);
   background-image:      -o-#{$direction}-gradient($value);
   background-image:         #{$direction}-gradient($value);
+}
+
+// function to init body and html
+@mixin init{
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 // Function to justify items to center display flex
@@ -169,7 +186,7 @@
   @include prefixes(text-shadow , $value);
 }
 
-// Funtion to set differerents themes
+// Funtion to set differerents themes to body
 @mixin themes(){
   &.theme2{
     @include gradient(radial, (#e3f2fd , #90caf9));
@@ -533,7 +550,7 @@
     @include prefixes(transform, $value);
 }
 
-// Function to set transform-style
+// Function to set transform-origin
 @mixin transform-origin($value){
     @include prefixes(transform-origin, $value);
 }
