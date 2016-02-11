@@ -415,7 +415,7 @@ body{
 	background: rgba(255,255,255,.5);
 	font-weight: bold;
 	display: inline;
-	max-width: 190px;
+	max-width: 210px;
 	min-height: 60px;
 	z-index: 10;
 	overflow: hidden;
@@ -536,6 +536,87 @@ body{
 		@include border-radius(50%);	
 		//@include animation(loading 3s infinite ease);
 	}
+}
+
+.popup{
+	position: fixed;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 90%;
+	width: 900px;
+	height: calc(100vh - 100px);
+	padding: 2rem;
+	background: rgba(255,255,255,.89);
+	opacity: 0;
+	z-index: -1;
+	height: calc(100vh - 100px);
+    overflow: hidden;
+	overflow-y: auto;
+	@include transition(all .9s ease);
+	@include box-shadow(0 0 3px #323232);
+	@include border-radius(5px);
+
+	&.open{
+		z-index: 100;
+		opacity: 1;
+	}
+
+	h1{
+		text-align: center;
+		font-weight: bold;
+		font-family: 'Architects Daughter', cursive;
+		font-size: 27px;
+		margin-bottom: 2rem;
+    	text-decoration: overline;
+	}
+
+	ul{
+		list-style: none;
+		padding-left: 1.5rem;
+		margin: 1rem 0;
+		display: inline-block;
+		width: calc(100% / 2 - 50px);
+		vertical-align: top;
+
+		li{
+			padding: .5rem;
+			margin: .15rem;
+			font-size: 14px;
+
+			&.header{
+				margin: .5rem 0;
+				font-weight: bold;
+			}
+
+			em{
+				padding: .25rem;
+				background: rgba(130,130,130,.3);
+				vertical-align: top;
+				@include border-radius(3px);
+			}
+		}
+	}
+
+	.close{
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		padding: .25rem .6rem;
+		border: solid thin #323232;
+		cursor: pointer;
+		background: white;
+		@include border-radius(50%);
+		@include transform(scale(.7));
+		@include transition(all .5s ease);
+
+		&:hover{
+			@include transform(scale(1));
+		}
+	}
+
 }
 
 @import 'queries';

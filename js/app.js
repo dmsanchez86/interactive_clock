@@ -45,6 +45,62 @@ var App = {
 						'English',
 						'Spanish'
 					]
+				},
+				help:{
+					title: "Shortcuts Keyboards",
+					theme: {
+						title: 'Themes Clock',
+						1: [
+							"numpad '1'",
+							"Theme Radioactive"
+						],
+						2: [
+							"numpad '2'",
+							"Theme Node JS"
+						],
+						3: [
+							"numpad '3'",
+							"Theme Classic"
+						],
+						4: [
+							"numpad '4'",
+							"Theme HTML"
+						]
+					},
+					size: {
+						title: 'Sizes Clock',
+						1: [
+							"Combination 'shift + a'",
+							"Small"
+						],
+						2: [
+							"Combination 'shift + m'",
+							"Medium"
+						],
+						3: [
+							"Combination 'shift + b'",
+							"Big"
+						]
+					},
+					language: {
+						title: 'Language',
+						1: [
+							"Letter 'e'",
+							"English"
+						],
+						2: [
+							"Letter 's'",
+							"Spanish"
+						],
+					},
+					help: {
+						title: 'Help',
+						1: [
+							"Letter 'h'",
+							"Help Popup"
+						]
+
+					}
 				}
 			}
 		},
@@ -83,6 +139,63 @@ var App = {
 						'Ingles',
 						'Español'
 					],
+				},
+				help:{
+					title: "Atajos de Teclado",
+					theme: {
+						title: 'Temas Reloj',
+						1: [
+							"Teclado Númerico '1'",
+							"Tema Radioactivo"
+						],
+						2: [
+							"Teclado Númerico '2'",
+							"Tema Node JS"
+						],
+						3: [
+							"Teclado Númerico '3'",
+							"Tema Clásico"
+						],
+						4: [
+							"Teclado Númerico '4'",
+							"Tema HTML"
+						]
+					},
+					size: {
+						title: 'Tamaños Reloj',
+						1: [
+							"Combinación de Teclas 'shift + a'",
+							"Pequeño"
+						],
+						2: [
+							"Combinación de Teclas 'shift + m'",
+							"Mediano"
+						],
+						3: [
+							"Combinación de Teclas 'shift + b'",
+							"Grande"
+						]
+					},
+					language: {
+						title: 'Idioma',
+						1: [
+							"Letra 'e'",
+							"Inglés"
+						],
+						2: [
+							"Letra 's'",
+							"Español"
+						],
+
+					},
+					help: {
+						title: 'Ayuda',
+						1: [
+							"Letra 'h'",
+							"Popup Ayuda"
+						]
+
+					}
 				}
 			}
 		}
@@ -91,6 +204,7 @@ var App = {
 
 $().ready(function(){
 
+	// function to manage the loader
 	loader();
 
 	var $current_date = $('.current_date');
@@ -167,7 +281,6 @@ $().ready(function(){
 			initial = false;
 		}
 
-
 		// end seconds
 		if(step_seconds == 360){
 			step_seconds = 0;
@@ -193,7 +306,6 @@ $().ready(function(){
 			}
 
 			step_minutes = App.current_minutes * 6;
-
 		}
 
 		step_seconds = App.current_seconds * 6;
@@ -241,7 +353,6 @@ $().ready(function(){
 		$('.clock').removeClass('small medium big');
 		$('.clock').addClass(size);
 	});
-	
 
 	// click on the list languages
 	$('.config ul.language li:not(.header)').unbind('click').click(function(){
@@ -254,6 +365,75 @@ $().ready(function(){
 		localStorage.setItem('settings', JSON.stringify(App.settings));
 
 		translate_app(language);
+	});
+
+	// click help icon
+	$('.item.help').unbind('click').click(function(){
+		$('.popup.help').addClass('open');
+	});
+
+	// click to close popup
+	$('.popup.help .close').unbind('click').click(function(){
+		$('.popup.help').removeClass('open');
+	});
+
+	$(window).unbind('keypress').keypress(function(e){
+		var code = e.keyCode;
+		console.log(code);
+
+		var theme = null;
+		var language = null;
+		var size = null;
+
+		if(code == 49) // num 1
+			theme = "theme1"; 
+		else if(code == 50) // num 2
+			theme = "theme2"; 
+		else if(code == 51) // num 3
+			theme = theme = "theme3"; 
+		else if(code == 52) // num 4
+			theme = "theme4"; 
+		else if(code == 115) // s
+			language = "spanish"; 
+		else if(code == 101) // e
+			language = "english"; 
+		else if(code == 83) // shift + s
+			size = "small"; 
+		else if(code == 77) // shift + m
+			size = "medium"; 
+		else if(code == 66) // shift + b
+			size = "big"; 
+		else if(code == 104) // h
+			$('.popup.help').toggleClass('open');
+		else{
+			theme = null;
+			size = null;
+			language = null;
+		}
+
+		if(theme != null){
+			App.settings.theme = theme;
+			localStorage.setItem('settings', JSON.stringify(App.settings));
+
+			change_favicon(theme);
+
+			$('body').removeClass('theme1 theme2 theme3 theme4');
+			$('body').addClass(theme);
+		}
+		if(language != null){
+
+			App.settings.language = language;
+			localStorage.setItem('settings', JSON.stringify(App.settings));
+
+			translate_app(language);
+		}
+		if(size != null){
+			App.settings.size = size;
+			localStorage.setItem('settings', JSON.stringify(App.settings));
+
+			$('.clock').removeClass('small medium big');
+			$('.clock').addClass(size);
+		}
 	});
 
 	function change_favicon(theme){
@@ -289,6 +469,45 @@ $().ready(function(){
 				var $elem = $(o);
 				$elem.text(App.language[App.current_language].words.menu_config.language[i]);
 			});			
+
+			// tranlate popup help
+			$('.popup.help h1').text(App.language[App.current_language].words.help.title);
+			$('.popup.help ul.themes li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.theme.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.theme[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.theme[i][1]);
+				}
+			});	
+			$('.popup.help ul.sizes li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.size.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.size[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.size[i][1]);
+				}
+			});	
+			$('.popup.help ul.language li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.language.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.language[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.language[i][1]);
+				}
+			});	
+			$('.popup.help ul.help li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.help[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.help[i][1]);
+				}
+			});	
 		}else{
 			App.current_language = "english";
 
@@ -312,7 +531,46 @@ $().ready(function(){
 			$('.config ul.language li').each(function(i,o){
 				var $elem = $(o);
 				$elem.text(App.language[App.current_language].words.menu_config.language[i]);
-			});		
+			});	
+
+			// tranlate popup help
+			$('.popup.help h1').text(App.language[App.current_language].words.help.title);	
+			$('.popup.help ul.themes li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.theme.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.theme[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.theme[i][1]);
+				}
+			});	
+			$('.popup.help ul.sizes li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.size.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.size[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.size[i][1]);
+				}
+			});	
+			$('.popup.help ul.language li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.language.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.language[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.language[i][1]);
+				}
+			});	
+			$('.popup.help ul.help li').each(function(i,o){
+				var $elem = $(o);
+				if(i == 0){
+					$elem.text(App.language[App.current_language].words.help.help.title);
+				}else{
+					$elem.find('em').text(App.language[App.current_language].words.help.help[i][0]);
+					$elem.find('span').text(App.language[App.current_language].words.help.help[i][1]);
+				}
+			});	
 		}
 	}
 
