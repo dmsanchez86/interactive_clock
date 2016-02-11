@@ -559,7 +559,7 @@ body{
 	@include box-shadow(0 0 3px #323232);
 	@include border-radius(5px);
 
-	&.open{
+	&.open{ 
 		z-index: 100;
 		opacity: 1;
 	}
