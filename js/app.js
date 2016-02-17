@@ -217,6 +217,7 @@ var App = {
 
 	// initializacion App
 	init: function(){
+
 		// function to manage the loader
 		this.loader();
 
@@ -365,8 +366,8 @@ var App = {
 
 		// event window when press keyboards
 		windowPress: function(){
-			$(window).unbind('keypress').keypress(function(e){
-				var code = e.keyCode; // get the code
+			$(document).keydown(function(event){
+				var code = event.keyCode; // get the code
 
 				var theme = null;
 				var language = null;
@@ -380,9 +381,9 @@ var App = {
 					theme = theme = "theme3"; 
 				else if(code == 52) // num 4
 					theme = "theme4"; 
-				else if(code == 115) // s
+				else if(code == 83) // s
 					language = "spanish"; 
-				else if(code == 101) // e
+				else if(code == 69) // e
 					language = "english"; 
 				else if(code == 83) // shift + s
 					size = "small"; 
@@ -392,7 +393,7 @@ var App = {
 					if ($(window).width() > 600) size = "big"; 
 					else size = null;
 				}
-				else if(code == 104) // h
+				else if(code == 72) // h
 					$('.popup.help').toggleClass('open');
 				else{ // others letters
 					theme = null;
@@ -501,6 +502,14 @@ var App = {
 				$('.clock').removeClass('big medium').addClass("small");
 				$('.config ul.size li:not(.header)').removeClass('active').eq(0).addClass('active'); // add class active item small list size
 			}
+
+			// event resize window
+			$(window).resize(function(){
+				if ($(window).width() < 600) {
+					$('.clock').removeClass('big medium').addClass("small");
+					$('.config ul.size li:not(.header)').removeClass('active').eq(0).addClass('active'); // add class active item small list size
+				}
+			});
 		},
 
 		// function to set current time
